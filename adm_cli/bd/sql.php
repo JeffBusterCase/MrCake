@@ -14,8 +14,8 @@
 		{
 			//require_once "conexao.php";
 			
-			$serverName = "";// bem seguro
-			$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Let_22livre@");
+			$serverName = "localhost\\SQLEXPRESS";// bem seguro
+            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
 			$conn = sqlsrv_connect( $serverName, $connectionInfo );
 			if( $conn === false ) 
 			{
@@ -40,8 +40,8 @@
 		
 		public function verifica($email)
 		{
-			$serverName = "";
-			$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Let_22livre@");
+			$serverName = "localhost\\SQLEXPRESS";
+            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
 			$conn = sqlsrv_connect( $serverName, $connectionInfo );
 			if( $conn === false ) 
 			{
@@ -91,8 +91,8 @@
 			global $cel;
 			global $id_origem;
 		
-			$serverName = "";
-			$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Let_22livre@");
+			$serverName = "localhost\\SQLEXPRESS";
+            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
 			$conn = sqlsrv_connect( $serverName, $connectionInfo );
 			if( $conn === false ) 
 			{
@@ -139,8 +139,8 @@
             sqlsrv_close($conn);
 		}
 		private function get_historico_compras($id_cliente, $status){
-            $serverName = "";
-            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Let_22livre@");
+            $serverName = "localhost\\SQLEXPRESS";
+            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
             $conn = sqlsrv_connect( $serverName, $connectionInfo );
             if( $conn === false )
             {

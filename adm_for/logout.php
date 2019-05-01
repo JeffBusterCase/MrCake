@@ -38,9 +38,12 @@
 	</head>
 	
 	<!-- quando você passa a função para o documento, pode passar por parâmetro a quantidade de seg, q a pagina vai ficar  -->
-	<body onLoad="atualizaContador(15);">
-		
-		Sua seção expirou por ter ficado inativo por mais de 15 minutos
+	<body onLoad="atualizaContador(5);">
+		<?php
+            if($_GET['pq'] !== 'usuario'){
+                echo "Sua seção expirou por ter ficado inativo por mais de 5 minutos";
+            }
+        ?>
 		<br/>
 		<br/>
 		<br/>

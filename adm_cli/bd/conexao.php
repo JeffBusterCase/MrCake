@@ -1,24 +1,27 @@
 <?php
-	
-	$serverName = "";
-	$connectionInfo = array( "Database"=>"mrcake", "UID"=>"syst", "PWD"=>"Trab@!123@!");
+    	// vou mudar aqui.
+
+	$serverName = "localhost\\SQLEXPRESS";
+	$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
 	$conn = sqlsrv_connect( $serverName, $connectionInfo );
 	if( $conn === false ) {
         die(print_r(sqlsrv_errors(), true));
     }
 
-    function querySQL($query_string) {
-        $serverName = "";
-        $connectionInfo = array( "Database"=>"mrcake", "UID"=>"syst", "PWD"=>"Trab@!123@!");
-        $_conn = sqlsrv_connect( $serverName, $connectionInfo );
-        if( $_conn === false ) {
+    function getConnection()
+    {
+
+        $serverName = "localhost\\SQLEXPRESS";
+        $connectionInfo = array("Database" => "mrcake", "UID" => "sa", "PWD" => "Rodrigo321");
+        $_conn = sqlsrv_connect($serverName, $connectionInfo);
+        if ($_conn === false) {
             die(print_r(sqlsrv_errors(), true));
         }
 
-        $results = sqlsrv_query($_conn, $query_string);
-        return sqlsrv_fetch_array($query_string, SQLSRV_FETCH_ASSOC);
-
-        sqlsrv_close($_conn);
+        return $_conn;
+        // feche ela manualmente
     }
-	
+    function fetch($results){
+	    return sqlsrv_fetch_array($results, SQLSRV_FETCH_ASSOC);
+    }
 ?>

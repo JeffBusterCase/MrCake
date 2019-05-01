@@ -2,18 +2,26 @@
 	<div class="container" style="margin-top: 50px">
 		<h2>Histórico de Compras</h2>
 		<table class="table table-striped">
-			<thead>
+			<thead align="left">
 				<tr>
-					<th>Data da Compra</th>
+					<th>Data da Entrega</th>
 					<th>Produto</th>
 					<th>Fornecedor</th>
 					<th>Valor</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
 					<th>Status</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody align="left">
                 <?php // TODO: Aplicar DRY ( Don't Repeat Yourself )
                     require_once "bd\conexao.php";
+
+                    function toReal($val){
+                        return str_replace(".",",", "$val");
+                    }
+
+                    $con = getConnection();
 
                     $pedidos_em_aguardo = $sql->get_historico_compras_em_aguardo($id_origem);
 
@@ -21,35 +29,31 @@
                         $id_produto = $pedido_row['id_produto'];
 
                         $query = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
-                        $query_results = sqlsrv_query($conn, $query);
-                        $produto_row = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
+                        $query_results = sqlsrv_query($con, $query);
+                        $produto_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
                         $query = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
-                        $query_results = sqlsrv_query($conn, $query);
+                        $query_results = sqlsrv_query($con, $query);
                         $fornecedor_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
 
                 ?>
                     <tr>
                         <td>sem data prévia</td>
-                        <td>  <?php echo $produto_row['nome'];?></td>
-                        <td>  <?php echo $fornecedor_row['nome_fantasia'];?></td>
-                        <td>R$<?php echo intval($pedido_row['num_pedido']) * floatval($produto_row['preco']);?></td>
-                        <td>Aguardando aprovação</td>
+                        <td>  <?php echo utf8_encode($produto_row['nome']);?></td>
+                        <td>  <?php echo utf8_encode($fornecedor_row['nome_fantasia']);?></td>
+                        <td>R$<?php echo toReal($produto_row['preco']) ?></td>
+                        <td><?php echo $pedido_row['num_pedido']; ?></td>
+                        <td>R$
+                            <?php
+                            $valor = intval($pedido_row['num_pedido']) * floatval($produto_row['preco']);
+                            echo toReal($valor);
+                            ?></td>
+                        <td>Aguardando</td>
                     </tr>
                 <?php
-                    }
-                ?>
-                <tr>
-                    <td>sem data prévia</td>
-                    <td>Exemplo</td>
-                    <td>Fornecedor 3</td>
-                    <td>R$ 80,00</td>
-                    <td>Aguardando aprovação</td>
-                </tr>
-                <?php
-                    require_once "bd\conexao.php";
+                    } // FOREACH END
 
                     // este $sql vem do call em index para um instancia da classe sql.
                     // que gera as variaveis globais $id_origem, $nome, etc
@@ -60,35 +64,41 @@
                         $id_produto = $pedido_row['id_produto'];
 
                         $query = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
-                        $query_results = sqlsrv_query($conn, $query);
-                        $produto_row = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
+                        $query_results = sqlsrv_query($con, $query);
+                        $produto_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
                         $query = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
-                        $query_results = sqlsrv_query($conn, $query);
+                        $query_results = sqlsrv_query($con, $query);
                         $fornecedor_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
 
                 ?>
                     <tr>
-                        <td>  <?php echo $pedido_row['data_entrega'];?></td>
-                        <td>  <?php echo $produto_row['nome'];?></td>
-                        <td>  <?php echo $fornecedor_row['nome_fantasia'];?></td>
-                        <td>R$<?php echo intval($pedido_row['num_pedido']) * floatval($produto_row['preco']);?></td>
+                        <td>
+                            <?php
+                                //$data_classe = DateTime::createFromFormat("l dS F Y", $pedido_row['data_entrega']);
+                                //$data_convertida = $data_classe->format('d/m/Y');
+                                echo $pedido_row['data_entrega']->format('d/m/Y');
+                            ?>
+                        </td>
+                        <td>  <?php echo utf8_encode($produto_row['nome']); ?></td>
+                        <td>  <?php echo utf8_encode($fornecedor_row['nome_fantasia']); ?></td>
+                        <td>R$<?php echo toReal($produto_row['preco']); ?></td>
+                        <td><?php echo $pedido_row['num_pedido']; ?></td>
+                        <td>R$
+                            <?php
+                                $valor = intval($pedido_row['num_pedido']) * floatval($produto_row['preco']);
+                                echo toReal($valor);
+                            ?>
+                        </td>
                         <td>Entregue</td>
                     </tr>
                 <?php
                     }
 
-                    sqlsrv_close($conn);
+                    sqlsrv_close($con);
                 ?>
-				<tr>
-					<td>01/10/2018</td>
-					<td>Segundo Exemplo</td>
-					<td>Fornecedor 1</td>
-					<td>R$ 30,00</td>
-					<td>Entregue</td>
-				</tr>
 			</tbody>
 		</table>
 	</div>

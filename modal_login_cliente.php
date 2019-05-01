@@ -13,14 +13,14 @@
 				<div class="modal-body mx-3" style="margin: auto">
 					<div class="md-form mb-5">
 						<!-- <i class="fa fa-envelope prefix grey-text"></i> -->
-						<input type="email" id="email" name = "email" class="form-control validate" required>
-						<label data-error="Favor colocar o e-mail correto" data-success="" for="email" id="teste">E-mail</label>
+						<input type="email" id="txtEmailLoginCliente" name = "txtEmailLoginCliente" class="form-control validate" required>
+						<label data-error="Favor colocar o e-mail correto" data-success="" for="txtEmailLoginCliente" id="teste">E-mail</label>
 					</div>
 
 					<div class="md-form mb-4">
 						<!-- <i class="fa fa-lock prefix grey-text"></i> -->
-						<input type="password" id="senha" name = "senha" class="form-control validate" required>
-						<label data-error="Senha inválida" data-success="" for="senha">Senha</label>
+						<input type="password" id="txtSenhaLoginCliente" name = "txtSenhaLoginCliente" class="form-control validate" required>
+						<label data-error="Senha inválida" data-success="" for="txtSenhaLoginCliente">Senha</label>
 					</div>
 				</div>
 				

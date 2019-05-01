@@ -4,7 +4,7 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>Data da Compra</th>
+						<th>Data da venda</th>
 						<th>Produto</th>
 						<th>Cliente</th>
 						<th>Valor</th>
@@ -12,9 +12,6 @@
 					</tr>
 				</thead>
 				<tbody>
-					
-					
-					
 					<tr>
 						 <td>01/10/2018</td>
 						 <td>Bolo 1</td>

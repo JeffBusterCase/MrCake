@@ -5,8 +5,8 @@
 	
 	if(isset ($_POST) && !empty($_POST))
 	{
-		$email = $_POST['email'];
-		$senha = $_POST['senha'];		
+		$email = $_POST['txtEmailLoginCliente'];
+		$senha = $_POST['txtSenhaLoginCliente'];
 		
 		$sql = "SELECT * FROM usuarios WHERE email = '$email'";
 		$stmt = sqlsrv_query( $conn, $sql );

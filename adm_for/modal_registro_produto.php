@@ -38,7 +38,7 @@
 								<option value="3"> Bolo de cenoura </option>
 							</select>
 							<!-- TODO: fazer func no JQuery -->
-							<button>Adicionar</button>
+							<button style="margin-top: 5px;">Adicionar</button>
 						</div>
 
 						<label class="col-6 " for="produto-img"> Inserir imagens</label>

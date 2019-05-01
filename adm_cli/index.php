@@ -69,12 +69,15 @@
                          </a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="Produtos.html">Produtos</a>
+                         <a class="nav-link" href="logout.php?pq=usuario">Logout</a>
                     </li>
                </ul>
                <!-- Links -->
-               <form class="form-inline my-2 my-lg-0 ml-auto">
-                    <input class="form-control " type="search" placeholder="Pesquisar" aria-label="Pesquisar produtos">
+               <form id="form_pesquisa" class="form-inline my-2 my-lg-0 ml-auto" action="handle_display_pesquisa.php?email=<?php echo $email;?>" method="POST">
+                    <!--        Mega gambiarra a seguir        -->
+                    <input name="txtIdCliente"     type="number" style="display:none" value="<?php echo $id_origem; ?>">
+                    <input name='txtEmailPesquisa' type="text"   style="display: none;"          value="<?php echo $email ?>">
+                    <input name="txtPesquisaClienteProduto" id="txtPesquisaClienteProduto" class="form-control " type="search" placeholder="Pesquisar" aria-label="Pesquisar produtos">
                     <button class="btn btn-md my-2 my-sm-0 ml-3 btn-pink" type="submit">Ir</button>
                </form>
           </div>
@@ -135,9 +138,7 @@
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="..\node_modules\mdbootstrap\js\jquery-3.3.1.min.js"></script>
 		<script src="..\node_modules\mdbootstrap\js\popper.min.js"></script>
-		<script src="..\node_modules\mdbootstrap\js\bootstrap.js"></script>
 		<script src="..\node_modules\mdbootstrap\js\bootstrap.min.js"></script>
-		<script src="..\node_modules\mdbootstrap\js\mdb.js"></script>
 		<script src="..\node_modules\mdbootstrap\js\mdb.min.js"></script>
 	</body>
 </html>

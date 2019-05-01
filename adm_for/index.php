@@ -63,11 +63,14 @@
           <div class="collapse navbar-collapse" id="basicExampleNav">
                <!-- Links -->
                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                         <a class="nav-link" href="Home.html">Home
-                              <span class="sr-only">(current)</span>
-                         </a>
-                    </li>
+                   <li class="nav-item active">
+                       <a class="nav-link" href="index.php?email=<?php echo $email ?>">Home
+                           <span class="sr-only">(current)</span>
+                       </a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="logout.php?pq=usuario">Logout</a>
+                   </li>
 					<!--não sei pq ta aqui-->
                     <li class="nav-item">
                          <a class="nav-link" href="">Produtos</a>

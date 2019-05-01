@@ -20,9 +20,6 @@
 					<span class="sr-only">(current)</span>
 				</a>
 			</li>
-			<li class="nav-item" id = "mprodutos">
-				<a class="nav-link" id = "produtos" href="#">Produtos</a>
-			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="" data-toggle="modal" data-target="#modalLoginFormCliente">Área dos Clientes</a>
 			</li>
@@ -47,10 +44,10 @@
 		</ul>
 
 		<!-- Links -->
-		<form class="form-inline my-2 my-lg-0 ml-auto">
-			<input class="form-control " type="search" placeholder="Pesquisar" aria-label="Search">
-			<button class="btn btn-md my-2 my-sm-0 ml-3 btn-pink" type="submit">Search</button>
-		</form>
+<!--		<form class="form-inline my-2 my-lg-0 ml-auto">-->
+<!--			<input class="form-control " type="search" placeholder="Pesquisar" aria-label="Search">-->
+<!--			<button class="btn btn-md my-2 my-sm-0 ml-3 btn-pink" type="submit">Search</button>-->
+<!--		</form>-->
 	</div>
 	<!-- Collapsible content -->
 </nav>
