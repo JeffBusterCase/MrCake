@@ -45,8 +45,28 @@
 		{
 			$id_fornecedor = $row['id_origem'];
 		}
-		
-		
+
+		$sql = "SELECT COUNT(*) N FROM Produtos";
+		$stmt = sqlsrv_query($conn, $sql);
+		if($stmt)
+        {
+            $rows = sqlsrv_has_rows( $stmt );
+            if ($rows === false)
+            {
+                echo "<script>alert('Erro Salvando imagem')</script>";
+            }
+        }
+		$n = null;
+        while( $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) )
+        {
+            $n = 'bolo_' . $row['N'] . '.jpg';
+        }
+
+		$imgfile = fopen('/Imagens/Produtos/' . $n, 'wb') or die('Error opening file to save img');
+
+        fwrite($imgfile, $imagem);
+        fclose($imgfile);
+
 		$sql1 = "insert into produtos(id_fornecedor, nome, descricao, preco) values ($id_fornecedor, '$nome', '$descricao', '$preco')"; //"('2', 'Teste', 'Teste', '10.00')";
 		$stmt1 = sqlsrv_query( $conn, $sql1 );
 		if($stmt1)

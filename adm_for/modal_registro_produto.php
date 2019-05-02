@@ -42,7 +42,7 @@
 						</div>
 
 						<label class="col-6 " for="produto-img"> Inserir imagens</label>
-						<input type="file" class="col-9 form-control-file" name = "foto" id="exampleFormControlFile1">
+						<input type="file" class="col-9 form-control-file" name="foto" id="exampleFormControlFile1">
 						<label for=""></label>
 
 					</div>
