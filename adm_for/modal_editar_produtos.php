@@ -50,7 +50,7 @@
 						*/ 
 						?>
 
-						<label class="col-6 " for="produto-img"> Inserir imagens</label>
+						<label class="col-6 " for="produto-img">Inserir imagens</label>
 						<input type="file" class="col-9 form-control-file" name = "foto" id="exampleFormControlFile1">
 						<label for=""></label>
 
@@ -58,6 +58,7 @@
 					<input type = "text" name = "email" value = "<?php echo "$email"; ?>" style = "display:none">
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<input type="submit" class="btn btn-primary"  value = "Cadastrar">
 						<input type="submit" class="btn btn-primary"  value = "Cadastrar">
 					</div>
 				</div>

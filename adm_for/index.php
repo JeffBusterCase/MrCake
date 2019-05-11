@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<title>Área do cliente</title>
+	<title>Área do Fornecedor</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta lang="pt-br">
@@ -43,7 +43,7 @@
 	
 	
   </head>
-  <body onLoad="atualizaContador(0);">
+  <body onLoad="/* atualizadaContador(0) */">
     <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ Navbar ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
      <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
      <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar">

@@ -14,7 +14,8 @@
 		$nome = $_POST['txtNomeP'];
 		$descricao = $_POST['txtDescricaoP'];
 		$preco = $_POST['txtPrecoP'];
-		$imagem = $_POST['foto'];
+		$imagem = $_POST['txtFotoP'];
+		$ingredientes = $_POST['txtIngredientesP'];
 		$preco =  str_replace(",",".",$preco);
 		
 		
