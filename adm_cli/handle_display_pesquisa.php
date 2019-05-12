@@ -165,7 +165,7 @@
                 <div class="row">
         <?php
 
-        require_once 'bd\conexao.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/bd/conexao.php';
 
         $search_string = $_POST['txtPesquisaClienteProduto'];
         $email = $_POST['txtEmailPesquisa'];
@@ -173,15 +173,16 @@
         function pesquisaProdutos($search_string){
             $search_string = strtolower($search_string);
 
-            $con = getConnection();
+            $con = $conn;
 
-            $query_string = "SELECT * FROM Produtos";
+            $sql = "SELECT * FROM Produtos";
 
-            $query_results = sqlsrv_query($con, $query_string);
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
 
             $results = array();
 
-            while($produto = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC)){
+            while($produto = $stmt->fetchAll(PDO::FETCH_ASSOC)){
                 // Pesquisar o nome do produto contem a string de pesquisa
                 if (strpos(strtolower($produto['nome']), $search_string) !== false ){
                     array_push($results, $produto);

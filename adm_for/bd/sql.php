@@ -88,24 +88,21 @@
 		
 		public function dados($email)
 		{
-		
 			global $senha;
 			global $nf;
 			global $rs;
 			global $cnpj;
 			global $tel;
 			global $id_origem;
-			
-			$serverName = "localhost\\SQLEXPRESS";
-            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-			$conn = sqlsrv_connect( $serverName, $connectionInfo );
+
 			if( $conn === false ) 
 			{
 				die( print_r( sqlsrv_errors(), true));
 			}	
 			
 			$sql = "SELECT * FROM usuarios where email = '$email'";
-			$stmt = sqlsrv_query( $conn, $sql );			
+			$conn->prepare($sql);
+			$stmt = $conn->execute();
 			if( $stmt === false) 
 			{
 				die( print_r( sqlsrv_errors(), true) );
