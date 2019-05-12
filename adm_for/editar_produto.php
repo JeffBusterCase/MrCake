@@ -34,7 +34,7 @@
 			
 		}
 		
-		while( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) )
+		foreach( $stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
 		{
 			$id_fornecedor = $row['id_origem'];
 		}

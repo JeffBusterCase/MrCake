@@ -47,8 +47,8 @@
 			{
                 if (this.readyState == 4 && this.status == 200) 
 				{
-                    var myObj = JSON.parse(this.responseText);
-                    document.getElementById("retorno").innerHTML = myObj.name;
+                    //var myObj = JSON.parse(this.responseText);
+                    //document.getElementById("retorno").innerHTML = myObj.name;
                 }
             };
             xmlhttp.open("GET", "bd/zeratempo.php", true);
@@ -68,8 +68,8 @@
 			{
                 if (this.readyState == 4 && this.status == 200) 
 				{
-                    var myObj = JSON.parse(this.responseText);
-                    document.getElementById("retorno").innerHTML = myObj.name;
+                    //var myObj = JSON.parse(this.responseText);
+                    //document.getElementById("retorno").innerHTML = myObj.name;
                 }
             };
             xmlhttp.open("GET", "bd/zeratempo.php", true);

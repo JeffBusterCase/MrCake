@@ -38,9 +38,13 @@
 		$sql->verifica($email);		
 		$sql->dados($email);
 	
-	?>	
-	
-	
+	?>
+
+      <script>
+          function atualizaContador(n){
+              return;
+          }
+      </script>
   </head>
   <body onLoad="atualizaContador(0);">
     <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ Navbar ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
