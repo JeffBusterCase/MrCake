@@ -1,7 +1,7 @@
 <?php
     require_once "bd/conexao.php";//$conn
 
-
+    // teste
     if(isset ($_POST) && !empty($_POST)) 
 	{
 
