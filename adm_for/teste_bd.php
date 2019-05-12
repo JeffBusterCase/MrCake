@@ -7,7 +7,7 @@
 	$sql = "SELECT * FROM administradores";
 	$stmt = sqlsrv_query( $conn, $sql );
 	if( $stmt === false) {
-		die( print_r( sqlsrv_errors(), true) );
+		die( print_r( $conn->errorInfo, true) );
 	}
 	
 	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {

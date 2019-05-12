@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ab9d16-ccbc-4f84-8c27-4621704abfec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_cli/bd/addtempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/bd/addtempo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_cli/teste_bd.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/teste_bd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adm_for/bd/addtempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/addtempo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adm_for/bd/sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/sql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/bd/zeratempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/zeratempo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/cria_produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/cria_produtos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/editar_perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/editar_perfil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/editar_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/editar_produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/teste_bd.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/teste_bd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bd/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/bd/conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bd/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bd/script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/function/function_php.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/function_php.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle_registra_cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/handle_registra_cliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inserts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inserts.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +35,10 @@
       <set />
     </option>
     <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@131.255.37.219" type="feb32156:DbDataSourceImpl" />
+      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="mrcake@localhost" type="feb32156:DbDataSourceImpl" />
@@ -62,9 +69,9 @@
           <entry key="html" value="4" />
           <entry key="js" value="1" />
           <entry key="json" value="1" />
-          <entry key="php" value="214" />
+          <entry key="php" value="227" />
           <entry key="scss" value="1" />
-          <entry key="sql" value="32" />
+          <entry key="sql" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -73,10 +80,10 @@
           <entry key="HTML" value="4" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="214" />
+          <entry key="PHP" value="227" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="4" />
-          <entry key="Scratch" value="28" />
+          <entry key="Scratch" value="32" />
           <entry key="UML" value="2" />
         </counts>
       </usages-collector>
@@ -85,10 +92,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="31" />
-          <entry key="PHP" value="21469" />
-          <entry key="PLAIN_TEXT" value="243" />
-          <entry key="SQL" value="632" />
-          <entry key="Scratch" value="7065" />
+          <entry key="PHP" value="22277" />
+          <entry key="PLAIN_TEXT" value="249" />
+          <entry key="SQL" value="662" />
+          <entry key="Scratch" value="7640" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -99,9 +106,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="php" value="21516" />
-          <entry key="sql" value="7681" />
-          <entry key="txt" value="211" />
+          <entry key="php" value="22354" />
+          <entry key="sql" value="8256" />
+          <entry key="txt" value="217" />
         </counts>
       </usages-collector>
     </session>
@@ -109,87 +116,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/cria_produtos.php">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6ca1a1a1-dbcb-4bc4-923d-c686a1f03875/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+            <state relative-caret-position="16">
+              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/edit.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/editar_perfil.php">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_7.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/editar_produto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+            <state relative-caret-position="16">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/adm_for/handle_display_pesquisa.php">
+        <entry file="file://$PROJECT_DIR$/handle_registra_cliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="343" column="7" lean-forward="true" selection-start-line="343" selection-start-column="7" selection-end-line="343" selection-end-column="7" />
+            <state relative-caret-position="243">
+              <caret line="75" column="12" lean-forward="true" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/bd/addtempo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/bd/conexao.php">
+        <entry file="file://$PROJECT_DIR$/bd/conexao.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="32">
-              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/bd/sql.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="181" column="50" selection-start-line="181" selection-start-column="50" selection-end-line="181" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/bd/zeratempo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -215,13 +172,20 @@
       <find>preco</find>
       <find>selle</find>
       <find>modal_registro_prod</find>
+      <find>$id_origem</find>
+      <find>sqlsrv_errors</find>
+      <find>sqlsrv_errors()</find>
+      <find>id_tipo</find>
     </findStrings>
     <replaceStrings>
       <replace>Rodrigo321</replace>
       <replace>&quot;sa&quot;</replace>
       <replace>$serverName = &quot;localhost\\SQLEXPRESS&quot;;</replace>
+      <replace>$conn-&gt;errorInfo</replace>
+      <replace>tipo_origem</replace>
     </replaceStrings>
     <dirStrings>
+      <dir>C:\xampp\htdocs\</dir>
       <dir>C:\xampp\htdocs</dir>
     </dirStrings>
   </component>
@@ -231,10 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_login_cliente.php" />
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_login_fornecedor.php" />
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_registro_cliente.php" />
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_registro_fornecedor.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/js/funcao.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/adm_cli/perfil.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/adm_cli/index.php" />
@@ -266,13 +226,11 @@
         <option value="$PROJECT_DIR$/handle_registra_fornecedor.php" />
         <option value="$PROJECT_DIR$/adm_for/bd/conexao.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/conexao.php" />
-        <option value="$PROJECT_DIR$/function/function_php.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/addtempo.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/zeratempo.php" />
         <option value="$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php" />
         <option value="$PROJECT_DIR$/adm_cli/handle_registra_pedido.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/sql.php" />
-        <option value="$PROJECT_DIR$/bd/conexao.php" />
         <option value="$PROJECT_DIR$/adm_cli/historico_compras.php" />
         <option value="$PROJECT_DIR$/adm_for/bd/addtempo.php" />
         <option value="$PROJECT_DIR$/adm_for/bd/sql.php" />
@@ -282,6 +240,12 @@
         <option value="$PROJECT_DIR$/adm_for/editar_produto.php" />
         <option value="$PROJECT_DIR$/adm_for/footer.php" />
         <option value="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" />
+        <option value="$PROJECT_DIR$/function/function_php.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_6.sql" />
+        <option value="$PROJECT_DIR$/bd/conexao.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_7.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6ca1a1a1-dbcb-4bc4-923d-c686a1f03875/console.sql" />
+        <option value="$PROJECT_DIR$/handle_registra_cliente.php" />
       </list>
     </option>
   </component>
@@ -375,11 +339,6 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="adm_for" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="bd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -411,7 +370,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -421,7 +380,7 @@
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -462,7 +421,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104566000" />
+    <option name="totallyTimeSpent" value="108321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,7 +438,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.502439" side_tool="true" weight="0.22692889" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49756098" visible="true" weight="0.18078668" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49756098" weight="0.18078668" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -493,12 +452,12 @@
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.21384615" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="13" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.40461537" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.20877458" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.18305598" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.0075642965" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.502439" side_tool="true" weight="0.22692889" />
@@ -532,70 +491,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/adm_cli/js/validacao.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modal_registro_fornecedor.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb3a0cb8-083b-443d-8d25-a047db204d2d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>b43e0630-41cd-4ceb-89ad-0a44dc9ada2d</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="396.0" y="279.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="240" column="77" lean-forward="true" selection-start-line="240" selection-start-column="77" selection-end-line="240" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/perfil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/funcao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-582">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modal_login_cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -607,20 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/modal_registro_produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="50" column="110" selection-start-line="50" selection-start-column="110" selection-end-line="50" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -638,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="55" lean-forward="true" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inserts.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -659,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/handle_registra_fornecedor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -677,20 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1503">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handle_registra_cliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/function/function_php.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -757,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bd/conexao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_cli/js/funcao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-575">
@@ -809,13 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/bd/addtempo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -875,6 +714,113 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="343" column="7" lean-forward="true" selection-start-line="343" selection-start-column="7" selection-end-line="343" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/historico_vendas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="169" column="7" lean-forward="true" selection-start-line="169" selection-start-column="7" selection-end-line="169" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/modal_registro_produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="50" column="110" selection-start-line="50" selection-start-column="110" selection-end-line="50" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-529" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/teste.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/teste_bd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/bd/addtempo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function/function_php.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/perfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1473" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/modal_editar_produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="55" lean-forward="true" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_6.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_7.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6ca1a1a1-dbcb-4bc4-923d-c686a1f03875/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handle_registra_cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="75" column="12" lean-forward="true" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
         </state>
       </provider>
     </entry>

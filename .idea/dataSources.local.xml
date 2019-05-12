@@ -19,5 +19,11 @@
       <secret-storage>master_key</secret-storage>
       <domain-auth>true</domain-auth>
     </data-source>
+    <data-source name="mrcake@localhost [2]" uuid="6ca1a1a1-dbcb-4bc4-923d-c686a1f03875">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

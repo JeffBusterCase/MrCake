@@ -7,7 +7,7 @@
 	$sql = "SELECT * FROM administradores";
 	$stmt = sqlsrv_query( $conn, $sql );
 	if( $stmt === false) {
-		die( print_r( sqlsrv_errors(), true) );
+		die( print_r( $conn->errorInfo, true) );
 	}
 	
 	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
@@ -34,7 +34,7 @@
 
     include_once "historico_compras.php";
 
-    if (($errors = sqlsrv_errors()) != null) {
+    if (($errors = $conn->errorInfo) != null) {
         foreach ($errors as $error) {
             echo "SQLSTATE: " . $error['SQLSTATE'] . "</br>";
             echo "\n code: " . $error['code'] . "</br>";

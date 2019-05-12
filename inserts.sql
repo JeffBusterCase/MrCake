@@ -12,7 +12,7 @@ delete from clientes;
 insert into fornecedores(cnpj, razao_social, nome_fantasia, telefone)
 values(123123123, 'vender', 'Cake Boss', 1133331111);
 
-insert into usuarios(id_origem, id_tipo, email, senha, status)
+insert into usuarios(id_origem, tipo_origem, email, senha, status)
 values(1, 3, 'a@f.com', '123', 0);
 
 -- segundo fornecedor para testes
@@ -20,20 +20,20 @@ values(1, 3, 'a@f.com', '123', 0);
 insert into fornecedores(cnpj, razao_social, nome_fantasia, telefone)
 values(444123123, 'vender cup cakes', 'Mr Cake Boss', 9933331111);
 
-insert into usuarios(id_origem, id_tipo, email, senha, status)
+insert into usuarios(id_origem, tipo_origem, email, senha, status)
 values(2, 3, 'boss@f.com', '123', 0);
 
 insert into clientes(cpf, nome, nascimento, telefone, celular)
 values(43415135311, 'Maria Brogi', GETDATE(), 1133221144, 1933331199);
 
-insert into usuarios(id_origem, id_tipo, email, senha, status)
+insert into usuarios(id_origem, tipo_origem, email, senha, status)
 values(2, 2, 'a@c.com', '123', 0);
 
 -- segundo cliente para testes
 insert into clientes(cpf, nome, nascimento, telefone, celular)
 values(43475135311, 'Batman', GETDATE(), 1133221344, 1933333499);
 
-insert into usuarios(id_origem, id_tipo, email, senha, status)
+insert into usuarios(id_origem, tipo_origem, email, senha, status)
 values(3, 2, 'batman@c.com', '123', 0);
 
 delete from produtos;

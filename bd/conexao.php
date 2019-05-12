@@ -1,8 +1,6 @@
 <?php
-	require_once  "../function/function_php.php";
-	
-	
-	
+	require_once  $_SERVER['DOCUMENT_ROOT'] . "/function/function_php.php";
+
 	$conn = new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
 
     class sql
@@ -18,13 +16,6 @@
 
         public function adm()
         {
-            //require_once "conexao.php";
-
-
-            if( $conn === false )
-            {
-                die( print_r( sqlsrv_errors(), true));
-            }
 
             $sql = "SELECT * FROM administradores";
             $stmt = $conn->prepare($sql);
@@ -32,7 +23,7 @@
 
             if( $stmt === false)
             {
-                die( print_r( sqlsrv_errors(), true) );
+                die( print_r( $conn->errorInfo(), true) );
             }
 
             while( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) )
@@ -49,7 +40,7 @@
             $stmt->execute();
             if( $stmt === false)
             {
-                die( print_r( sqlsrv_errors(), true) );
+                die( print_r( $conn->errorInfo(), true) );
                 header("location:logout.php");
             }
 
@@ -90,7 +81,7 @@
             $stmt->execute();
             if( $stmt === false)
             {
-                die( print_r( sqlsrv_errors(), true) );
+                die( print_r( $conn->errorInfo(), true) );
                 header("location:logout.php");
             }
             //echo "<script>alert('$email');</script>";
@@ -105,7 +96,7 @@
             $stmt->execute();
             if( $stmt1 === false)
             {
-                die( print_r( sqlsrv_errors(), true) );
+                die( print_r( $conn->errorInfo(), true) );
                 header("location:logout.php");
             }
 
@@ -126,7 +117,7 @@
             $stmt = $conn->prepare($sql);
             $stmt->execute();
             if($query_result === false){
-                die(print_r(sqlsrv_errors(), true));
+                die(print_r($conn->errorInfo(), true));
                 header("location:logout.php");
             }
             $results = array();
