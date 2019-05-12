@@ -33,18 +33,48 @@
 				$stmt-> execute();
 
 				$id = Indice_1($stmt, $total);
+                $ddd = '011';
 
 				$id+=1;//soma mais um com o retorno do banco de dados
-				$stmt = $conn->prepare("INSERT INTO FORNECEDORES VALUES (:ID_FORNECEDOR,:EMAIL, :SENHA,:CNPJ, :RAZAO_SOCIAL, :NOME_FANTASIA, :TELEFONE)");
+				$stmt = $conn->prepare("INSERT INTO FORNECEDORES (ID_FORNECEDOR, CNPJ, Razao_Social, Nome_Fantasia, DDD, Telefone)
+                  VALUES (:ID_FORNECEDOR,:CNPJ, :RAZAO_SOCIAL, :NOME_FANTASIA, :DDD, :TELEFONE)
+                ");
 				$stmt->bindParam(":ID_FORNECEDOR", $id);
-				$stmt->bindParam(":EMAIL", $email);
-				$stmt->bindParam(":SENHA", $senha);
 				$stmt->bindParam(":CNPJ", $cnpj);
 				$stmt->bindParam(":RAZAO_SOCIAL", $razao_social);
 				$stmt->bindParam(":NOME_FANTASIA", $nome_fantasia);
+				$stmt->bindParam(":DDD", $ddd);
 				$stmt->bindParam(":TELEFONE", $tel);
 				$stmt->execute();
-			
+
+                $id_fornecedor = $id;
+                $total = 'total';
+                $stmt = $conn->prepare("SELECT COUNT(Codigo) as $total FROM Usuarios");// conta a quantidade de chaves no banco de dados
+                $stmt-> execute();
+
+                if(!$stmt){
+                    echo "<script>alert($stmt->errorInfo()+'.');</script>";
+                }
+
+                $id = Indice_1($stmt, $total);
+                $tipo = 3;
+                $nivel_acesso = $tipo;
+
+                $stmt = $conn->prepare("INSERT INTO Usuarios(Codigo, ID_Origem, Tipo_Origem, Email, Senha, Nivel_Acesso)
+                  VALUES(:Codigo, :ID_Origem, :Tipo_Origem, :Email, :Senha, :Nivel_Acesso)
+                ");
+                $stmt->bindParam(":Codigo", $id);
+                $stmt->bindParam(":ID_Origem", $id_fornecedor);
+                $stmt->bindParam(":Tipo_Origem", $tipo);
+                $stmt->bindParam(":Email", $email);
+                $stmt->bindParam(":Senha", $senha);
+                $stmt->bindParam(":Nivel_Acesso", $tipo);
+                $stmt->execute();
+
+                if(!$stmt){
+                    echo "<script>alert($stmt->errorInfo()+'.');</script>";
+                }
+
 				echo "<script>alert('Fornecedor cadastro  com sucesso!');</script>";
 
 			} else{

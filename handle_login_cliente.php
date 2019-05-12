@@ -16,7 +16,8 @@
     }
 
 
-    if ($email == $result_email AND $result_senha === $senha) {//verifica o email e senha se for igual o login e aceito
+    if ($email == $result_email AND $result_senha === $senha) {
+        //verifica o email e senha se for igual o login e aceito
         echo "<script>alert($result_senha, $result_email);</script>";
 
         echo "<script>window.location.replace('/adm_cli/index.php?email=$email&senha=$senha');</script>";

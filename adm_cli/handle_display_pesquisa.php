@@ -167,13 +167,17 @@
 
         require_once $_SERVER['DOCUMENT_ROOT'] . '/bd/conexao.php';
 
+
+
         $search_string = $_POST['txtPesquisaClienteProduto'];
         $email = $_POST['txtEmailPesquisa'];
 
         function pesquisaProdutos($search_string){
             $search_string = strtolower($search_string);
 
-            $sql = "SELECT * FROM Produtos";
+            $conn = getConnection();
+
+            $sql = "SELECT id_produto, id_fornecedor, nome, descricao, preco FROM Produtos";
 
             $stmt = $conn->prepare($sql);
             $stmt->execute();
@@ -216,6 +220,8 @@
 
         function getFornecedor($id){
             $id = intval($id);
+
+            $conn = getConnection();
 
             $sql = "SELECT * FROM Fornecedores WHERE id_fornecedor = $id";
 
