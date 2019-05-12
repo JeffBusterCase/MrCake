@@ -21,7 +21,7 @@
 			
 		}
 		
-		foreach( $stmt->fetchAll( $stmt, PDO::FETCH_ASSOC) as $row) {
+		foreach( $stmt->fetchAll( PDO::FETCH_ASSOC) as $row) {
             if ($email == $row['email'] && $senha == $row['senha']) {
                 //$sql = "UPDATE USUARIOS SET status = 1 WHERE email = '$email'";
                 //$stmt = $conn->prepare($sql);

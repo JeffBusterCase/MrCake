@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ab9d16-ccbc-4f84-8c27-4621704abfec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bd/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/bd/conexao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handle_login_fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/handle_login_fornecedor.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +82,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="31" />
-          <entry key="PHP" value="23710" />
+          <entry key="PHP" value="23722" />
           <entry key="PLAIN_TEXT" value="249" />
           <entry key="SQL" value="673" />
           <entry key="Scratch" value="8439" />
@@ -97,7 +96,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="php" value="23798" />
+          <entry key="php" value="23810" />
           <entry key="sql" value="9055" />
           <entry key="txt" value="217" />
         </counts>
@@ -115,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/handle_login_fornecedor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+            <state relative-caret-position="159">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -133,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bd/conexao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="-743">
               <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
             </state>
           </provider>
@@ -296,8 +295,8 @@
         <option value="$PROJECT_DIR$/adm_for/index.php" />
         <option value="$PROJECT_DIR$/modal_login_fornecedor.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6ca1a1a1-dbcb-4bc4-923d-c686a1f03875/console.sql" />
-        <option value="$PROJECT_DIR$/handle_login_fornecedor.php" />
         <option value="$PROJECT_DIR$/bd/conexao.php" />
+        <option value="$PROJECT_DIR$/handle_login_fornecedor.php" />
       </list>
     </option>
   </component>
@@ -473,7 +472,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115194000" />
+    <option name="totallyTimeSpent" value="115337000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -849,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handle_login_fornecedor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/historico_vendas.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -868,8 +860,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bd/conexao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="-743">
           <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handle_login_fornecedor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
         </state>
       </provider>
     </entry>
