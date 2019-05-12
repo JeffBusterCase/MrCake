@@ -1,6 +1,6 @@
 <div ng-controller="novo_produto">
     <!-- Modal -->
-	<form action="" class="modal fade" id="modalCadastroProduto" tabindex="-1" role="form" aria-labelledby="exampleModalLongTitle" aria-hidden="true"
+	<form action="/cria_produtos.php" class="modal fade" id="modalCadastroProduto" tabindex="-1" role="form" aria-labelledby="exampleModalLongTitle" aria-hidden="true"
 		method="POST">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -28,8 +28,8 @@
 						</div>
 						<label for="ingrediente-produto"class="col-3 form-label" for="inlineFormCustomSelectPref">Ingredientes</label>
 						<div class="col-8">
-							<!-- TODO: Usar JQuery para armazenar ingredientes em um array e passar para o PHP com POST 
-								 A cada OK, vc adiciona o array, e depois manda no POST.
+							<!--
+								 A cada OK, vc adiciona no array, e depois manda no POST.
 							-->
 
                             <script>
@@ -38,7 +38,7 @@
                                 function add_ingrediente(){
                                     var table = document.querySelector("#ingredientes_table");
                                     var ingrediente = document.querySelector("#ingrediente_input");
-
+                                    ingrediente.focus();
                                     var nome_ingrediente = ingrediente.value.trim();
 
                                     if(nome_ingrediente == ''){
@@ -51,7 +51,7 @@
                                     ingrediente_row += nome_ingrediente;
                                     ingrediente_row += "</td>";
                                     ingrediente_row += "<td>";
-                                    ingrediente_row += "<button style='border:none;background-color:white' onclick='delete_ingrediente(\"" + nome_ingrediente + "\", this)'>";
+                                    ingrediente_row += "<button style='border:none;background-color:white' type='button' onclick='delete_ingrediente(\"" + nome_ingrediente + "\", this)'>";
                                     ingrediente_row += "<i class=' fa fa-trash'></i>";
                                     ingrediente_row += "</button>";
                                     ingrediente_row += "</td>";
@@ -59,12 +59,13 @@
 
                                     table.innerHTML += ingrediente_row;
 
-                                    ingrediente.value = "";
-
                                     ingredientes.push(nome_ingrediente);
                                     var hiddenIngredientesInput = document.querySelector("#ingredientes");
                                     hiddenIngredientesInput.value = ingredientes.join(',');
                                     qtIngredientes++;
+
+                                    ingrediente.value = "";
+                                    ingrediente.focus();
                                 }
 
                                 window.add_ingrediente = add_ingrediente;
@@ -79,13 +80,13 @@
                                     var row = row_btn.parentElement.parentElement;
                                     var ingredientes_table = document.querySelector("#ingredientes_table");
                                     ingredientes_table.removeChild(row);
-
                                 }
 
                                 window.delete_ingrediente = delete_ingrediente;
 
                                 function addKPress(e){
-                                    if(e.code == "Enter"){
+                                    if(e.keyCode == 13){
+                                        e.preventDefault();
                                         add_ingrediente();
                                     }
                                 }
@@ -110,8 +111,7 @@
                                 <input class="form-control" type="text" style="display:none;" name="txtIngredientesP" id="ingredientes">
                             </div>
 
-							<!-- TODO: fazer func no JQuery -->
-                            <button style="margin-top: 5px;width:90px;height:30px;padding:0px;"  class="btn btn-success" onclick="window.add_ingrediente()">Adicionar</button>
+                            <button type="button" style="margin-top: 5px;width:90px;height:30px;padding:0px;"  class="btn btn-success" onclick="window.add_ingrediente()">Adicionar</button>
 						</div>
 
 						<label class="col-6 " for="produto-img"> Inserir imagens</label>
@@ -120,8 +120,8 @@
 					</div>
 					<input type = "text" name = "email" value = "<?php echo "$email"; ?>" style = "display:none">
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						<input type="submit" class="btn btn-primary"  value = "Cadastrar">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="close_cria_produto">Cancelar</button>
+						<input type="submit" class="btn btn-primary" value="Cadastrar">
 					</div>
 				</div>
 			</div>

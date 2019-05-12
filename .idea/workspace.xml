@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35ab9d16-ccbc-4f84-8c27-4621704abfec" name="Default Changelist" comment="" />
+    <list default="true" id="35ab9d16-ccbc-4f84-8c27-4621704abfec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/bd/sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/sql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/bd/zeratempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/zeratempo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/cria_produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/cria_produtos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/js/funcao.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/js/funcao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_for/modal_registro_produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/modal_registro_produto.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +31,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mrcake@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -37,9 +51,10 @@
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.83" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,9 +66,9 @@
           <entry key="jpg" value="5" />
           <entry key="js" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="200" />
+          <entry key="php" value="210" />
           <entry key="scss" value="1" />
-          <entry key="sql" value="36" />
+          <entry key="sql" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -63,10 +78,10 @@
           <entry key="Image" value="5" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="200" />
+          <entry key="PHP" value="210" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="4" />
-          <entry key="Scratch" value="32" />
+          <entry key="Scratch" value="34" />
           <entry key="UML" value="2" />
         </counts>
       </usages-collector>
@@ -75,10 +90,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="31" />
-          <entry key="PHP" value="24540" />
+          <entry key="PHP" value="26090" />
           <entry key="PLAIN_TEXT" value="243" />
           <entry key="SQL" value="632" />
-          <entry key="Scratch" value="8040" />
+          <entry key="Scratch" value="8166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -89,8 +104,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="php" value="24587" />
-          <entry key="sql" value="8656" />
+          <entry key="php" value="26137" />
+          <entry key="sql" value="8782" />
           <entry key="txt" value="211" />
         </counts>
       </usages-collector>
@@ -98,50 +113,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adm_for/modal_registro_produto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+            <state relative-caret-position="194">
+              <caret line="122" column="115" selection-start-line="122" selection-start-column="115" selection-end-line="122" selection-end-column="115" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/produtos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/edit.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/editar_perfil.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_for/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -149,8 +128,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adm_for/cria_produtos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="240">
+              <caret line="68" column="143" selection-start-line="68" selection-start-column="143" selection-end-line="68" selection-end-column="143" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm_for/bd/sql.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm_for/js/funcao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm_for/bd/zeratempo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm_for/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="89" column="97" lean-forward="true" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/adm_for/handle_display_pesquisa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm_cli/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="77" column="114" selection-start-line="77" selection-start-column="104" selection-end-line="77" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_5.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -159,14 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MR CAKE LOGO TEXT</find>
-      <find>MR CAKE</find>
-      <find>Search</find>
-      <find>active</find>
-      <find>1</find>
-      <find>&quot;</find>
-      <find>produto</find>
-      <find>GO</find>
       <find>teste_</find>
       <find>Let_22livre@</find>
       <find>Trab@!123@!</find>
@@ -186,6 +220,17 @@
       <find>btnEdt</find>
       <find>btn</find>
       <find>btned</find>
+      <find>alert</find>
+      <find>submit</find>
+      <find>sub</find>
+      <find>su</find>
+      <find>s</find>
+      <find>modal</find>
+      <find>query</find>
+      <find>delete</find>
+      <find>delete_ingrediente</find>
+      <find>pq</find>
+      <find>$id_origem</find>
     </findStrings>
     <replaceStrings>
       <replace>Rodrigo321</replace>
@@ -194,6 +239,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs</dir>
+      <dir>C:\xampp\htdocs\</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -202,9 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/menu.php" />
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/index.php" />
-        <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/adm_for/index.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/Area_Clientes.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_login_cliente.php" />
         <option value="&lt;bcec886c-c893-4b3f-87ec-63e999e05d6d&gt;/modal_login_fornecedor.php" />
@@ -240,19 +283,22 @@
         <option value="$PROJECT_DIR$/inserts.sql" />
         <option value="$PROJECT_DIR$/adm_for/bd/conexao.php" />
         <option value="$PROJECT_DIR$/adm_cli/historico_compras.php" />
-        <option value="$PROJECT_DIR$/adm_for/bd/sql.php" />
         <option value="$PROJECT_DIR$/adm_for/historico_vendas.php" />
         <option value="$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php" />
         <option value="$PROJECT_DIR$/modal_login_cliente.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_3.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_4.sql" />
-        <option value="$PROJECT_DIR$/adm_for/cria_produtos.php" />
-        <option value="$PROJECT_DIR$/adm_for/index.php" />
-        <option value="$PROJECT_DIR$/adm_for/js/funcao.php" />
         <option value="$PROJECT_DIR$/adm_for/modal_editar_produtos.php" />
         <option value="$PROJECT_DIR$/adm_for/produtos.php" />
         <option value="$PROJECT_DIR$/adm_for/modal_registro_produto.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_5.sql" />
+        <option value="$PROJECT_DIR$/adm_for/cria_produtos.php" />
+        <option value="$PROJECT_DIR$/adm_for/bd/sql.php" />
+        <option value="$PROJECT_DIR$/adm_for/js/funcao.php" />
+        <option value="$PROJECT_DIR$/adm_for/bd/zeratempo.php" />
+        <option value="$PROJECT_DIR$/adm_for/index.php" />
+        <option value="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" />
       </list>
     </option>
   </component>
@@ -346,7 +392,18 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="adm_cli" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="adm_for" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="adm_for" type="462c0819:PsiDirectoryNode" />
+              <item name="bd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -407,6 +464,9 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\adm_for" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\adm_cli" />
     </key>
@@ -443,12 +503,13 @@
       <workItem from="1542800618378" duration="38345000" />
       <workItem from="1556748928826" duration="4756000" />
       <workItem from="1556930386041" duration="1199000" />
-      <workItem from="1557603065194" duration="8265000" />
+      <workItem from="1557603065194" duration="11019000" />
+      <workItem from="1557671538047" duration="4671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116511000" />
+    <option name="totallyTimeSpent" value="123936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,7 +526,7 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.502439" side_tool="true" weight="0.22692889" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49756098" visible="true" weight="0.21558245" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49756098" visible="true" weight="0.21860817" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -479,12 +540,12 @@
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.25846153" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.2676923" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.20877458" />
-      <window_info anchor="right" id="Database" order="4" weight="0.118003026" />
+      <window_info anchor="right" id="Database" order="4" weight="0.0408472" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.502439" side_tool="true" weight="0.22692889" />
@@ -518,25 +579,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bd/script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="240" column="77" lean-forward="true" selection-start-line="240" selection-start-column="77" selection-end-line="240" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/perfil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1166" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bd/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_cli/perfil.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -602,38 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="65" column="20" lean-forward="true" selection-start-line="65" selection-start-column="20" selection-end-line="72" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="55" lean-forward="true" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1392">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -682,13 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/bd/sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="201" column="61" selection-start-line="201" selection-start-column="61" selection-end-line="201" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -752,30 +759,6 @@
     <entry file="file://$PROJECT_DIR$/adm_for/js/validacao.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/js/funcao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="146" column="29" lean-forward="true" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/cria_produtos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/editar_perfil.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/editar_produto.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -789,6 +772,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/editar_perfil.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/edit.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -799,28 +785,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_for/modal_editar_produtos.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+        <state relative-caret-position="258">
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/modal_registro_produto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="38" column="58" lean-forward="true" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+        <state relative-caret-position="194">
+          <caret line="122" column="115" selection-start-line="122" selection-start-column="115" selection-end-line="122" selection-end-column="115" />
           <folding>
             <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_5.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/cria_produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="68" column="143" selection-start-line="68" selection-start-column="143" selection-end-line="68" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/bd/sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/bd/zeratempo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/modal_editar_produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="61" column="59" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/js/funcao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_cli/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="77" column="114" selection-start-line="77" selection-start-column="104" selection-end-line="77" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="89" column="97" lean-forward="true" selection-start-line="89" selection-start-column="97" selection-end-line="89" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_for/handle_display_pesquisa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
         </state>
       </provider>
     </entry>

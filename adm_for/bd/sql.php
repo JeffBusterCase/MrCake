@@ -67,18 +67,18 @@
 				die( print_r( sqlsrv_errors(), true) );
 				header("location:logout.php");
 			}		
-			
+
+			$row2 = null;
 			while( $row1 = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
 			{				
 				$row2 = $row1['status'];	
-				$senha = $row1['senha']; 				
-				
-				
+				$senha = $row1['senha'];
 			}
 			
 			if($row2 != 1)
 			{
-				header("location:logout.php");
+			    echo "<script>window.location.href = '/adm_for/logout.php'</script>";
+				//header("location:logout.php");
 			}
 			
 			
