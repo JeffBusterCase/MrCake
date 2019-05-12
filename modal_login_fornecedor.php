@@ -9,11 +9,11 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<form class = "form_fornecedor" method = "post" action = "">
+			<form class = "form_fornecedor" method="POST" action="handle_login_fornecedor.php">
 				<div class="modal-body mx-3">
 					<div class="md-form mb-5">
 						<!-- <i class="fa fa-envelope prefix grey-text"></i> -->
-						<input type="email" name = "email" id="defaultForm-email" class="form-control validate">
+						<input type="email" name="email" id="defaultForm-email" class="form-control validate">
 						<label data-error="wrong" data-success="right" for="defaultForm-email">E-mail</label>
 					</div>
 
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="modal-footer d-flex justify-content-center">
-					<input type = "submit" class="btn btn-default" id = "enviar" value = "Login"/>
+                    <button value="fornecedor" type="submit" class="btn btn-deep-orange" id="Login_Fornecedor">Entrar</button>
 				</div>
 			</form>
 			<div id="recebeDadosLoginFornecedor" style="display:none"></div>

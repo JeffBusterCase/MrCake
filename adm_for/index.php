@@ -28,11 +28,10 @@
 	<?php 
 	
 		include "js/funcao.php";
-		require_once "bd/sql.php";
+		require_once $_SERVER['DOCUMENT_ROOT'] . "/bd/conexao.php";
 		
 		$email = $_GET['email'];
-		
-		$email = str_replace("'","123",$email);
+
 		//echo "<div style = 'margin: 0 auto;width: 90%;'>$email</div>";
 		$sql = new sql();
 		

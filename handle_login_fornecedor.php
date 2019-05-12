@@ -6,40 +6,37 @@
 	if(isset ($_POST) && !empty($_POST))
 	{
 		$email = $_POST['email'];
-		$senha = $_POST['senha'];		
-		
-		$sql = "SELECT email, senha FROM usuarios WHERE email = '$email'";
-		$stmt = sqlsrv_query( $conn, $sql );
+		$senha = $_POST['senha'];
+
+		$sql = "SELECT email, senha FROM usuarios WHERE email = '$email' and senha='$senha'";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute();
+
 		if($stmt)
-		{			
-			$rows = sqlsrv_has_rows( $stmt );
-			if ($rows === false)
+		{
+			if ($stmt->rowCount() == 0)
 			{							
 				echo "<script>alert('Usuário ou senha inválida');</script>";
 			}
 			
 		}
 		
-		while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
-		{
-			if($email == $row['email'] && $senha == $row['senha'])
-			{
-				$sql = "UPDATE USUARIOS SET status = 1 WHERE email = '$email'";
-				$stmt = sqlsrv_query( $conn, $sql );
-				// TODO: Usar token, ex: Af4F4f3KK49 ou 242524. Na barra da URL ou como cache.
-				echo "<script>window.location.replace('/adm_for/index.php?email=$email');</script>";
-			}
-			else
-			{
-				echo "<script>alert('Usuário ou senha inválida');</script>";
-			}
-		}	
+		foreach( $stmt->fetchAll( $stmt, SQLSRV_FETCH_ASSOC) as $row) {
+            if ($email == $row['email'] && $senha == $row['senha']) {
+                $sql = "UPDATE USUARIOS SET status = 1 WHERE email = '$email'";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
 
-		sqlsrv_free_stmt( $stmt);
+                // TODO: Usar token, ex: Af4F4f3KK49 ou 242524. Na barra da URL ou como cache.
+                echo "<script>window.location.replace('/adm_for/index.php?email=$email');</script>";
+            } else {
+                echo "<script>alert('Usuário ou senha inválida');</script>";
+            }
+        }
 	}
 	else
 	{
-		echo 'erro -> POST INVALIDO';
+		echo "</script>alert('erro -> POST INVALIDO');</script>";
 	}
 	
 ?>
