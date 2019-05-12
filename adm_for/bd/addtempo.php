@@ -1,21 +1,17 @@
 <?php
-	$serverName = "localhost\\SQLEXPRESS";
-	$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-	$conn = sqlsrv_connect( $serverName, $connectionInfo );
-	if( $conn === false ) 
-	{
-		die( print_r( sqlsrv_errors(), true));
-	}	
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/bd/conexao.php';
 	
 	$sql = "SELECT * FROM usuarios";
-	$stmt = sqlsrv_query( $conn, $sql );
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+
 	if( $stmt === false) 
 	{
 		die( print_r( sqlsrv_errors(), true) );
 	}
 
 	
-	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
+	while( $row = $stmt->fetchAll( PDO::FETCH_ASSOC) )
 	{		
 		$codigo = $row['codigo'];
 		$tempo = $row['tempo'];
@@ -24,12 +20,14 @@
 		if($tempo > 50)
 		{
 			$sql = "update usuarios set status = 0, tempo = 0 where codigo = $codigo";
-			$stmt = sqlsrv_query( $conn, $sql );
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
 		}
 		else if($status == 1 && $tempo <=50)
 		{
 			$sql = "update usuarios set tempo = $tempo where codigo = $codigo";
-			$stmt = sqlsrv_query( $conn, $sql );
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
 		}		
 	}
 	

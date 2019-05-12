@@ -1,13 +1,5 @@
 <?php
-	
-	$serverName = "localhost\\SQLEXPRESS";
-	$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-	$conn = sqlsrv_connect( $serverName, $connectionInfo );
-	if( $conn === false ) 
-	{
-		die( print_r( sqlsrv_errors(), true));
-	}	
-	
+
 	if(isset ($_POST) && !empty($_POST))
 	{
 		$email = $_POST['email'];
@@ -30,40 +22,39 @@
 		
 		
 		$sql = "SELECT id_origem FROM usuarios WHERE email = '$email'";
-		$stmt = sqlsrv_query( $conn, $sql );
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
 		if($stmt)
-		{			
-			$rows = sqlsrv_has_rows( $stmt );
-			if ($rows === false)
+		{
+			if ($stmt->rowCount() == 0)
 			{							
 				echo "<script>alert('Usuário ou senha inválida');</script>";
 			}
 			
 		}
 		
-		while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
+		while( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) )
 		{
 			$id_fornecedor = $row['id_origem'];
 		}
 		
 		
-		$sql1 = "update produtos set nome = '$nome', descricao = '$descricao', preco = '$preco' where id_fornecedor = $id_fornecedor";
-		$stmt1 = sqlsrv_query( $conn, $sql1 );
-		if($stmt1)
+		$sql = "update produtos set nome = '$nome', descricao = '$descricao', preco = '$preco' where id_fornecedor = $id_fornecedor";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+		if($stmt)
 		{			
 			echo "<script>alert('Produto editado com sucesso!');</script>";
 		}
 		else
 		{
 			echo "<script>alert('Algo deu errado!');</script>";
-		}		
-
-		sqlsrv_free_stmt( $stmt);
-		sqlsrv_free_stmt( $stmt1);		
+		}
 	}
 	else
 	{
 		echo "<script>alert('ha');</script>";
 	}
-	
 ?>

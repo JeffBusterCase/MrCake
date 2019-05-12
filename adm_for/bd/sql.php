@@ -109,32 +109,30 @@
 				header("location:logout.php");
 			}		
 			
-			while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
+			while( $row = $stmt->fetchAll( PDO::FETCH_ASSOC) )
 			{				
 				$senha = $row['senha']; 
 				$id_origem = $row['id_origem'];
 			}
 			
-			$sql1 = "SELECT * FROM fornecedores where id_fornecedor = '$id_origem'";
-			$stmt1 = sqlsrv_query( $conn, $sql1 );			
-			if( $stmt1 === false) 
+			$sql = "SELECT * FROM fornecedores where id_fornecedor = '$id_origem'";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
+			if( $stmt === false)
 			{
 				die( print_r( sqlsrv_errors(), true) );
 				header("location:logout.php");
 			}		
 			
-			while( $row1 = sqlsrv_fetch_array( $stmt1, SQLSRV_FETCH_ASSOC) ) 
+			while( $row = $stmt->fetchAll( PDO::FETCH_ASSOC) )
 			{				
-				$nf = $row1['nome_fantasia'];
-				$rs = $row1['rasao_social'];				
-				$cnpj = $row1['cnpj'];
-				$tel = $row1['telefone'];
-				
+				$nf = $row['nome_fantasia'];
+				$rs = $row['rasao_social'];
+				$cnpj = $row['cnpj'];
+				$tel = $row['telefone'];
 			}
-			
-			
-			sqlsrv_free_stmt( $stmt);
-			sqlsrv_free_stmt( $stmt1);
+
 		}
 		
 		public function produtos($e)
@@ -171,23 +169,17 @@
 			global $produto;
 			global $descricao;
 			
-			$serverName = "localhost\\SQLEXPRESS";
-            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-			$conn = sqlsrv_connect( $serverName, $connectionInfo );
-			if( $conn === false ) 
-			{
-				die( print_r( sqlsrv_errors(), true));
-			}	
-			
 			$sql = "SELECT nome, descricao, preco FROM produtos where id_produto = '$i'";
-			$stmt = sqlsrv_query( $conn, $sql );	
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
 			if( $stmt === false) 
 			{
 				die( print_r( sqlsrv_errors(), true) );
 				
 			}	
 			
-			while( $produtos = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
+			while( $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC) )
 			{				
 				$preco = $produtos['preco'];
 				$produto = $produtos['nome'];

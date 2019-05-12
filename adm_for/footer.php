@@ -3,7 +3,7 @@
 		<div class="container">
 			<a href="Home.html">
 				<img class="rounded" src="../Mr Cake Logo.png" width="auto" height="100" alt="Mr Cake Logo">
-				<h4 class="h4-responsive">Mr. Cake - Estamos aqui para adoçar o seu dia</h6>
+				<h4 class="h4-responsive">Mr. Cake - Estamos aqui para adoçar o seu dia</h4>
 			</a>  
 		</div>
 	</div>

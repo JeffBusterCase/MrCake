@@ -1,5 +1,5 @@
 <?php
-    require_once "bd/conexao.php";//$conn
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/bd/conexao.php";//$conn
 
     $estagio = "";
 
