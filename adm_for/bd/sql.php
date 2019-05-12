@@ -67,18 +67,18 @@
 				die( print_r( sqlsrv_errors(), true) );
 				header("location:logout.php");
 			}		
-
-			$row2 = null;
+			
 			while( $row1 = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) 
 			{				
 				$row2 = $row1['status'];	
-				$senha = $row1['senha'];
+				$senha = $row1['senha']; 				
+				
+				
 			}
 			
 			if($row2 != 1)
 			{
-			    echo "<script>window.location.href = '/adm_for/logout.php'</script>";
-				//header("location:logout.php");
+				header("location:logout.php");
 			}
 			
 			
@@ -199,38 +199,6 @@
 			
 			//sqlsrv_free_stmt( $stmt); );
 		}
-        private function get_historico_compras($id_fornecedor, $status){
-            $serverName = "localhost\\SQLEXPRESS";
-            $connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-            $conn = sqlsrv_connect( $serverName, $connectionInfo );
-            if( $conn === false )
-            {
-                die( print_r( sqlsrv_errors(), true));
-            }
-
-            $query = "SELECT * FROM Pedidos WHERE id_cliente = $id_cliente"; // aqui status = 1 significa recebido
-            $query_result = sqlsrv_query($conn, $query);
-
-            if($query_result === false){
-                die(print_r(sqlsrv_errors(), true));
-                header("location:logout.php?pq=usuario");
-            }
-            $results = array();
-
-            while($row = sqlsrv_fetch_array($query_result, SQLSRV_FETCH_ASSOC)){
-                array_push($results, $row);
-            }
-
-            return $results;
-
-            sqlsrv_close($conn);
-        }
-        public function get_historico_compras_em_aguardo($id_cliente){
-            return $this->get_historico_compras($id_cliente, 0);
-        }
-        public function get_historico_compras_entregues($id_cliente){
-            return $this->get_historico_compras($id_cliente, 1);
-        }
 	}
 	
 ?>

@@ -1,13 +1,12 @@
 <?php
-	$serverName = "localhost\\SQLEXPRESS";
-	$connectionInfo = array( "Database"=>"mrcake", "UID"=>"sa", "PWD"=>"Rodrigo321");
-	$conn = sqlsrv_connect( $serverName, $connectionInfo );
+	$conn = new PDO("mysql:dbname=mrcake; host=localhost", "root", ""); 
+
 	if( $conn === false ) 
 	{
-		die( print_r( sqlsrv_errors(), true));
+		die( print_r( errors(), true));
 	}	
 	
-	$sql = "update usuarios set tempo = 0 where codigo = 2";
-	$stmt = sqlsrv_query( $conn, $sql );
+	//$sql = "update usuarios set tempo = 0 where codigo = 2";
+	//$stmt = sqlsrv_query( $conn, $sql );
 	
 ?>

@@ -50,7 +50,7 @@
                             $valor = intval($pedido_row['num_pedido']) * floatval($produto_row['preco']);
                             echo toReal($valor);
                             ?></td>
-                        <td>Aguardando</td>
+                        <td>Aguardando aprovação</td>
                     </tr>
                 <?php
                     } // FOREACH END

@@ -46,7 +46,7 @@
 						<form action = "" method = "post" class = "prod">
 							<input type = "text" name = "i" value = "1" style="display:none"/>  
 							<input type = "text" name = "acao" value = "eproduto" style="display:none"/>  
-							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar1" value = "Editar">
+							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar" value = "Editar">
 						</form>
 					</td>
 				</tr>
@@ -57,7 +57,7 @@
 						<form action = "" method = "post" class = "prod">
 							<input type = "text" name = "i" value = "2" style="display:none"/>  
 							<input type = "text" name = "acao" value = "eproduto" style="display:none"/>  
-							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar2" value = "Editar">
+							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar" value = "Editar">
 						</form>
 					</td>
 				</tr>
@@ -68,7 +68,7 @@
 						<form action = "" method = "post" class = "prod">
 							<input type = "text" name = "i" value = "3" style="display:none"/>  
 							<input type = "text" name = "acao" value = "eproduto" style="display:none"/>  
-							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar3" value = "Editar">
+							<input type = "submit" class="btn btn-sm btn-deep-orange" id = "btneditar" value = "Editar">
 						</form>
 						
 					</td>

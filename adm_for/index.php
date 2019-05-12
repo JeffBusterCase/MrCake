@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<title>Área do Fornecedor</title>
+	<title>Área do cliente</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
 	<meta lang="pt-br">
@@ -43,7 +43,7 @@
 	
 	
   </head>
-  <body onLoad="/* atualizadaContador(0) */">
+  <body onLoad="atualizaContador(0);">
     <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ Navbar ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
      <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
      <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar">
@@ -82,13 +82,10 @@
                     <!-- Dropdown -->
                </ul>
                <!-- Links -->
-              <form id="form_pesquisa" class="form-inline my-2 my-lg-0 ml-auto" action="handle_display_pesquisa.php?email=<?php echo $email;?>" method="POST">
-                  <!--        Mega gambiarra a seguir        -->
-                  <input name="txtIdFornecedor"     type="number" style="display:none" value="<?php echo $id_origem; ?>">
-                  <input name='txtEmailPesquisa' type="text"   style="display: none;"          value="<?php echo $email ?>">
-                  <input name="txtPesquisaClienteProduto" id="txtPesquisaClienteProduto" class="form-control " type="search" placeholder="Pesquisar" aria-label="Pesquisar produtos">
-                  <button class="btn btn-md my-2 my-sm-0 ml-3 btn-pink" type="submit">Ir</button>
-              </form>
+               <form class="form-inline my-2 my-lg-0 ml-auto">
+                    <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-md my-2 my-sm-0 ml-3 btn-pink" type="submit">Ir</button>
+               </form>
 			   
 			   
           </div>

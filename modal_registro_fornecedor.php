@@ -1,5 +1,5 @@
 <form class="modal fade" id="modalRegistroFornecedor" tabindex="-1" role="form" aria-labelledby="myModalLabel" aria-hidden="true"
-    action="" method="POST">
+    action="handle_registra_fornecedor.php" method="POST">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">

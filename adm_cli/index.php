@@ -29,7 +29,8 @@
 		require_once "js/funcao.php";
 		require_once "bd/sql.php";
 		
-		$email = $_GET['email'];
+		$email = $POST['email'];
+		$senha = $POST['senha'];
 		
 		$credenciais = str_replace("'","123",$email);
 		//echo "<div style = 'margin: 0 auto;width: 90%;'>$email</div>";

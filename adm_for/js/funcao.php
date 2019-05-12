@@ -42,18 +42,17 @@
             seg = 0;
 
             //zera o tempo no bd
-
-            $.ajax({
-                method: 'GET',
-                url: 'bd/zeratempo.php',
-                success: function(data){
-                    //document.querySelector('#retorno').innerHTML = data;
-                },
-                fail: function(e){
-                    console.log("ERROR ON AJAX(bd/zeratempo.php)");
-                    console.error(e);
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () 
+			{
+                if (this.readyState == 4 && this.status == 200) 
+				{
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("retorno").innerHTML = myObj.name;
                 }
-            });
+            };
+            xmlhttp.open("GET", "bd/zeratempo.php", true);
+            xmlhttp.send();
         });
 
 
@@ -69,8 +68,8 @@
 			{
                 if (this.readyState == 4 && this.status == 200) 
 				{
-                    //var myObj = JSON.parse(this.responseText);
-                    //document.getElementById("retorno").innerHTML = myObj.name;
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("retorno").innerHTML = myObj.name;
                 }
             };
             xmlhttp.open("GET", "bd/zeratempo.php", true);

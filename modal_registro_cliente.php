@@ -1,5 +1,5 @@
 <form class="modal fade" id="modalRegistroCliente" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-    action="" method="POST">
+    action="handle_registra_cliente.php" method="post">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -155,7 +155,7 @@
             <!-- FIM FORMULÁRIO DE REGISTRO -->
 
             <div class="modal-footer d-flex justify-content-center">
-                <button name="submitButton" value="cliente" type="submit" class="btn btn-deep-orange">Registrar</button>
+                <button name="submitButton" value="cliente" type="submit" class="btn btn-deep-orange" id="Registrar_Cliente">Registrar</button>
             </div>
 		
 			

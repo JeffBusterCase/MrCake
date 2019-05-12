@@ -250,14 +250,14 @@
             <!--    Items    -->
 
             <!-- Grid column -->
-            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" style="padding-bottom:30px;">
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
                 <!-- Card -->
                 <div class="card card-cascade wider card-ecommerce">
                     <!-- Card image -->
                     <div class="view view-cascade overlay">
                         <!--           Só que neste nível aqui /adm_cli não existe Imagens.             -->
                         <img src="../Imagens/<?php echo $produto['imagem']; ?>" class="card-img-top"
-                             alt="sample photo" width="10px" height="300px">
+                             alt="sample photo" width="10px" height="500px">
                         <a>
                             <div class="mask rgba-white-slight"></div>
                         </a>
