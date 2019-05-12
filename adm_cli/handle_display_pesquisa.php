@@ -173,8 +173,6 @@
         function pesquisaProdutos($search_string){
             $search_string = strtolower($search_string);
 
-            $con = $conn;
-
             $sql = "SELECT * FROM Produtos";
 
             $stmt = $conn->prepare($sql);
@@ -213,22 +211,20 @@
                 }
             }
 
-            sqlsrv_close($con);
             return $results;
         }
 
         function getFornecedor($id){
             $id = intval($id);
-            $con = getConnection();
 
-            $query = "SELECT * FROM Fornecedores WHERE id_fornecedor = $id";
-            $query_results = sqlsrv_query($con, $query);
+            $sql = "SELECT * FROM Fornecedores WHERE id_fornecedor = $id";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
 
             $fornecedor = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
 
             return $fornecedor;
-
-            sqlsrv_close($con);
         }
 
         $produtos = pesquisaProdutos($search_string);

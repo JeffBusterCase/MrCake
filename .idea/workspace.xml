@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ab9d16-ccbc-4f84-8c27-4621704abfec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/adm_cli/bd/addtempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/bd/addtempo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_cli/bd/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/bd/conexao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adm_cli/bd/sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/bd/sql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_cli/bd/zeratempo.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/bd/zeratempo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/bd/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/conexao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm_for/bd/sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_for/bd/sql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_cli/handle_registra_pedido.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/handle_registra_pedido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm_cli/historico_compras.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm_cli/historico_compras.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bd/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/bd/conexao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function/function_php.php" beforeDir="false" afterPath="$PROJECT_DIR$/function/function_php.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +59,7 @@
           <entry key="html" value="4" />
           <entry key="js" value="1" />
           <entry key="json" value="1" />
-          <entry key="php" value="194" />
+          <entry key="php" value="197" />
           <entry key="scss" value="1" />
           <entry key="sql" value="32" />
         </counts>
@@ -74,7 +70,7 @@
           <entry key="HTML" value="4" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="194" />
+          <entry key="PHP" value="197" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="4" />
           <entry key="Scratch" value="28" />
@@ -86,7 +82,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="31" />
-          <entry key="PHP" value="20722" />
+          <entry key="PHP" value="20996" />
           <entry key="PLAIN_TEXT" value="243" />
           <entry key="SQL" value="632" />
           <entry key="Scratch" value="7065" />
@@ -100,7 +96,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="32" />
-          <entry key="php" value="20769" />
+          <entry key="php" value="21043" />
           <entry key="sql" value="7681" />
           <entry key="txt" value="211" />
         </counts>
@@ -130,35 +126,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adm_cli/bd/sql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_cli/bd/zeratempo.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm_cli/footer.php">
+        <entry file="file://$PROJECT_DIR$/bd/conexao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-401">
-              <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+            <state relative-caret-position="112">
+              <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php">
+        <entry file="file://$PROJECT_DIR$/adm_cli/historico_compras.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+            <state relative-caret-position="319">
+              <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -232,8 +219,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/adm_cli/index.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b43e0630-41cd-4ceb-89ad-0a44dc9ada2d/console_2.sql" />
-        <option value="$PROJECT_DIR$/adm_cli/handle_registra_pedido.php" />
-        <option value="$PROJECT_DIR$/adm_cli/historico_compras.php" />
         <option value="$PROJECT_DIR$/adm_for/index.php" />
         <option value="$PROJECT_DIR$/adm_for/modal_registro_produto.php" />
         <option value="$PROJECT_DIR$/adm_for/logout.php" />
@@ -242,15 +227,17 @@
         <option value="$PROJECT_DIR$/adm_for/handle_display_pesquisa.php" />
         <option value="$PROJECT_DIR$/handle_login_cliente.php" />
         <option value="$PROJECT_DIR$/handle_registra_fornecedor.php" />
-        <option value="$PROJECT_DIR$/bd/conexao.php" />
         <option value="$PROJECT_DIR$/adm_for/bd/conexao.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/conexao.php" />
         <option value="$PROJECT_DIR$/function/function_php.php" />
         <option value="$PROJECT_DIR$/adm_for/bd/sql.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/addtempo.php" />
-        <option value="$PROJECT_DIR$/adm_cli/bd/sql.php" />
         <option value="$PROJECT_DIR$/adm_cli/bd/zeratempo.php" />
         <option value="$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php" />
+        <option value="$PROJECT_DIR$/adm_cli/handle_registra_pedido.php" />
+        <option value="$PROJECT_DIR$/adm_cli/bd/sql.php" />
+        <option value="$PROJECT_DIR$/bd/conexao.php" />
+        <option value="$PROJECT_DIR$/adm_cli/historico_compras.php" />
       </list>
     </option>
   </component>
@@ -344,7 +331,7 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="adm_cli" type="462c0819:PsiDirectoryNode" />
+              <item name="bd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -426,7 +413,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103061000" />
+    <option name="totallyTimeSpent" value="103694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,20 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/handle_registra_pedido.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/historico_compras.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/modal_registro_produto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-303">
@@ -737,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bd/conexao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm_for/bd/conexao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -793,17 +759,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/bd/sql.php">
+    <entry file="file://$PROJECT_DIR$/adm_cli/handle_registra_pedido.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/bd/zeratempo.php">
+    <entry file="file://$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state relative-caret-position="383">
+          <caret line="341" column="9" lean-forward="true" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -814,10 +780,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm_cli/handle_display_pesquisa.php">
+    <entry file="file://$PROJECT_DIR$/adm_cli/bd/zeratempo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="188" column="29" lean-forward="true" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+        <state relative-caret-position="16">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_cli/bd/sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bd/conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm_cli/historico_compras.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
         </state>
       </provider>
     </entry>

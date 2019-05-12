@@ -15,28 +15,30 @@
 			</thead>
 			<tbody align="left">
                 <?php // TODO: Aplicar DRY ( Don't Repeat Yourself )
-                    require_once "bd\conexao.php";
+                    require_once $_SERVER['DOCUMENT_ROOT'] . "/bd/conexao.php";
 
                     function toReal($val){
                         return str_replace(".",",", "$val");
                     }
-
-                    $con = getConnection();
 
                     $pedidos_em_aguardo = $sql->get_historico_compras_em_aguardo($id_origem);
 
                     foreach($pedidos_em_aguardo as $pedido_row) {
                         $id_produto = $pedido_row['id_produto'];
 
-                        $query = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
-                        $query_results = sqlsrv_query($con, $query);
-                        $produto_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
+                        $sql = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+
+
+                        $produto_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
-                        $query = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
-                        $query_results = sqlsrv_query($con, $query);
-                        $fornecedor_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
+                        $sql = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $fornecedor_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 ?>
                     <tr>
@@ -63,15 +65,17 @@
                     foreach($pedidos_entregues as $pedido_row) {
                         $id_produto = $pedido_row['id_produto'];
 
-                        $query = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
-                        $query_results = sqlsrv_query($con, $query);
-                        $produto_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
+                        $sql = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $produto_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
-                        $query = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
-                        $query_results = sqlsrv_query($con, $query);
-                        $fornecedor_row = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
+                        $sql = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $fornecedor_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 ?>
                     <tr>
@@ -96,8 +100,6 @@
                     </tr>
                 <?php
                     }
-
-                    sqlsrv_close($con);
                 ?>
 			</tbody>
 		</table>
