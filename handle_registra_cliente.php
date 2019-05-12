@@ -67,6 +67,10 @@
             $stmt = $conn->prepare("SELECT COUNT(Codigo) as $total FROM Usuarios");// conta a quantidade de chaves no banco de dados
             $stmt-> execute();
 
+            if(!$stmt){
+                echo "<script>alert($stmt->errorInfo()+'.');</script>";
+            }
+
             $id = Indice_1($stmt, $total);
 			$tipo = 2;
             $nivel_acesso = $tipo;
@@ -82,8 +86,12 @@
 			$stmt->bindParam(":Nivel_Acesso", $tipo);
             $stmt->execute();
 
+            if(!$stmt){
+                echo "<script>alert($stmt->errorInfo()+'.');</script>";
+            }
+
 			echo "<script>alert('Cadastro efetuado com sucesso!');</script>";
-		} else{
+		} else {
 			echo "<script>alert('O CPF: $cpf_1, já possui cadastro!');</script>";
 		}
 

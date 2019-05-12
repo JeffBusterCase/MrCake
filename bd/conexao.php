@@ -3,6 +3,10 @@
 
 	$conn = new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
 
+	function getConnection(){
+	    return new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
+    }
+
     class sql
     {
 
@@ -14,16 +18,20 @@
         public $cel;
         public $id_origem;
 
+        public function __construct()
+        {
+            $this->conn = new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
+        }
+
         public function adm()
         {
-
             $sql = "SELECT * FROM administradores";
-            $stmt = $conn->prepare($sql);
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute();
 
             if( $stmt === false)
             {
-                die( print_r( $conn->errorInfo(), true) );
+                die( print_r( $this->conn->errorInfo(), true) );
             }
 
             while( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) )
@@ -36,18 +44,17 @@
         public function verifica($email)
         {
             $sql = "SELECT status FROM usuarios where email = '$email'";
-            $stmt = $conn->prepare($sql);
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             if( $stmt === false)
             {
-                die( print_r( $conn->errorInfo(), true) );
+                die( print_r( $this->conn->errorInfo(), true) );
                 header("location:logout.php");
             }
 
-            $row1 = Indice_1($stmt);
-            $row2 = $row1['status'];
+            $row = Indice_1($stmt, 'status');
 
-            if($row2 != 1)
+            if($row != 1)
             {
                 header("location:logout.php");
             }
@@ -76,53 +83,53 @@
             global $cel;
             global $id_origem;
 
-            $sql = "SELECT * FROM usuarios where email = '$email'";
-            $stmt = $conn->prepare($sql);
+            $sql = "SELECT id_origem, senha FROM usuarios where email = '$email'";
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             if( $stmt === false)
             {
-                die( print_r( $conn->errorInfo(), true) );
+                die( print_r( $this->conn->errorInfo(), true) );
                 header("location:logout.php");
             }
             //echo "<script>alert('$email');</script>";
-            while( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) )
+            foreach( $stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
             {
                 $senha = $row['senha'];
                 $id_origem = $row['id_origem'];
             }
 
-            $sql1 = "SELECT * FROM clientes where id_cliente = '$id_origem'";
-            $stmt = $conn->prepare($sql);
+            $sql = "SELECT cpf, nome, telefone, celular FROM clientes where id_cliente = '$id_origem'";
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute();
-            if( $stmt1 === false)
+            if( $stmt === false)
             {
-                die( print_r( $conn->errorInfo(), true) );
+                die( print_r( $this->conn->errorInfo(), true) );
                 header("location:logout.php");
             }
 
-            while( $row1 = $stmt->fetchAll(PDO::FETCH_ASSOC) )
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row )
             {
-                $cpf = $row1['cpf'];
-                $nome = $row1['nome'];
-                //$nascimento = $row1['nascimento'];
+                $cpf = $row['cpf'];
+                $nome = $row['nome'];
+                //$nascimento = $row['nascimento'];
                 //$nascimento = "1987-04-10";
-                $tel = $row1['telefone'];
-                $cel = $row1['celular'];
+                $tel = $row['telefone'];
+                $cel = $row['celular'];
             }
 
         }
         private function get_historico_compras($id_cliente, $status){
 
-            $query = "SELECT * FROM Pedidos WHERE id_cliente = $id_cliente AND status = $status"; // aqui status = 1 significa recebido
-            $stmt = $conn->prepare($sql);
+            $sql = "SELECT codigo, num_pedido, id_cliente, id_produto, `status`, cod_endereco_entrega FROM Pedidos WHERE id_cliente = $id_cliente AND status = $status"; // aqui status = 1 significa recebido
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute();
-            if($query_result === false){
-                die(print_r($conn->errorInfo(), true));
+            if($stmt === false){
+                die(print_r($this->conn->errorInfo(), true));
                 header("location:logout.php");
             }
             $results = array();
 
-            while($row = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row){
                 array_push($results, $row);
             }
 

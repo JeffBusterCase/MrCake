@@ -27,10 +27,10 @@
 	<?php 
 	
 		require_once "js/funcao.php";
-		require_once "bd/sql.php";
+		require_once $_SERVER['DOCUMENT_ROOT'] . "/bd/conexao.php";
 		
-		$email = $POST['email'];
-		$senha = $POST['senha'];
+		$email = $_GET['email'];
+		$senha = $_GET['senha'];
 		
 		$credenciais = str_replace("'","123",$email);
 		//echo "<div style = 'margin: 0 auto;width: 90%;'>$email</div>";
@@ -120,7 +120,9 @@
 			
 			
 		</div>
-		
+		<div style="display:none" id="inatividade">
+
+        </div>
 	</div>
 
      <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ /. Nav Pills ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
