@@ -43,7 +43,7 @@
 
         public function verifica($email)
         {
-            $sql = "SELECT status FROM usuarios where email = '$email'";
+            $sql = "SELECT count(*) total FROM usuarios where email = '$email'";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             if( $stmt === false)
@@ -52,9 +52,9 @@
                 header("location:logout.php");
             }
 
-            $row = Indice_1($stmt, 'status');
+            $row = Indice_1($stmt, 'total');
 
-            if($row != 1)
+            if($row!= 1)
             {
                 header("location:logout.php");
             }
