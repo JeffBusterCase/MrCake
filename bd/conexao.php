@@ -7,7 +7,7 @@
 	    return new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
     }
 
-    class sql
+    class sqlCliente
     {
 
         public $senha;
@@ -153,4 +153,187 @@
     echo "$result_senha";
     var_dump($result_senha);
 	*/
+
+
+	class Produto {
+	    public $id_produto;
+	    public $nome;
+	    public $descricao;
+	    public $preco;
+    }
+
+    class sqlFornecedor
+    {
+        public $senha;
+        public $nf;
+        public $rs;
+        public $cnpj;
+        public $tel;
+        public $id_origem;
+        public $preco;
+        public $produto;
+        public $descricao;
+
+
+        public function __construct()
+        {
+            $this->conn = new PDO("mysql:dbname=mrcake; host=localhost", "root", "");
+        }
+
+        public function adm()
+        {
+
+            $sql = "SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone FROM administradores";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+            }
+
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $row)
+            {
+                echo $row['codigo'].", ".$row['nome']."<br />";
+            }
+        }
+
+        public function verifica($email)
+        {
+            global $senha;
+            global $nf;
+            global $rs;
+            global $cnpj;
+            global $tel;
+            global $id_origem;
+
+            $sql = "SELECT codigo, id_origem, tipo_origem, email, senha, nivel_acesso FROM usuarios where email = '$email'";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+                header("location:logout.php");
+            }
+
+            $senha = $stmt->fetch(PDO::FETCH_ASSOC)['senha'];
+
+            return $senha;
+        }
+
+        public function dados($email)
+        {
+            global $senha;
+            global $nf;
+            global $rs;
+            global $cnpj;
+            global $tel;
+            global $id_origem;
+
+            $sql = "SELECT codigo, id_origem, tipo_origem, email, senha, nivel_acesso FROM usuarios where email = '$email'";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+                header("location:logout.php");
+            }
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $senha = $row['senha'];
+            $id_origem = $row['id_origem'];
+
+            $sql = "SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone FROM fornecedores where id_fornecedor = '$id_origem'";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+                header("location:logout.php");
+            }
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $nf = $row['nome_fantasia'];
+            $rs = $row['razao_social'];
+            $cnpj = $row['cnpj'];
+            $tel = $row['telefone'];
+
+        }
+
+        public function getProdutos($email)
+        {
+            $sql = "SELECT id_fornecedor FROM Fornecedores INNER JOIN Usuarios ON ID_FORNECEDOR = ID_ORIGEM WHERE email = '$email'";
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+            }
+
+            if($stmt->rowCount() == 0){
+                echo "<script>alert('Erro acessando dados do fornecedor')</script>";
+                return;
+            }
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $id_fornecedor = $row['id_fornecedor'];
+
+            $sql = "SELECT id_produto, nome, descricao, preco FROM produtos where id_fornecedor = $id_fornecedor";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo, true) );
+
+            }
+
+            $produtos = array();
+
+            foreach( $stmt->fetchAll(PDO::FETCH_ASSOC)  as $row)
+            {
+                $produto = new Produto();
+
+                $produto->id_produto = $row['id_produto'];
+                $produto->preco = $row['preco'];
+                $produto->nome = $row['nome'];
+                $produto->descricao = $row['descricao'];
+
+                array_push($produtos, $produto);
+            }
+
+            return $produtos;
+        }
+
+        public function modalEditar($i)
+        {
+            global $preco;
+            global $produto;
+            global $descricao;
+
+            $sql = "SELECT nome, descricao, preco FROM produtos where id_produto = '$i'";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+
+            if( $stmt === false)
+            {
+                die( print_r( $this->conn->errorInfo(), true) );
+
+            }
+
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $produto)
+            {
+                $preco = $produto['preco'];
+                $produto = $produto['nome'];
+                $descricao = $produto['descricao'];
+            }
+        }
+    }
 ?>

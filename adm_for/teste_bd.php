@@ -21,7 +21,7 @@
 	//$query		= $Conexao -> query("select id, nome, idade FROM dbo.bla");
 	//$produtos	= $query -> fetchAll();
 	
-	$sql = new sql();
+	$sql = new sqlFornecedor();
 	
 	$sql->adm();
 

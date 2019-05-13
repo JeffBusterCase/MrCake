@@ -184,7 +184,7 @@
 
             $results = array();
 
-            while($produto = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $produto){
                 // Pesquisar o nome do produto contem a string de pesquisa
                 if (strpos(strtolower($produto['nome']), $search_string) !== false ){
                     array_push($results, $produto);
@@ -223,14 +223,19 @@
 
             $conn = getConnection();
 
-            $sql = "SELECT * FROM Fornecedores WHERE id_fornecedor = $id";
+            $sql = "SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone FROM Fornecedores WHERE id_fornecedor = $id";
 
             $stmt = $conn->prepare($sql);
             $stmt->execute();
 
-            $fornecedor = sqlsrv_fetch_array($query_results, SQLSRV_FETCH_ASSOC);
+            if($stmt){
+                $fornecedor = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            return $fornecedor;
+                return $fornecedor;
+            } else {
+                echo "<script>alert('PESQUISANDO PRODUTOS');</script>";
+                return false;
+            }
         }
 
         $produtos = pesquisaProdutos($search_string);
@@ -303,7 +308,6 @@
                                                 0
                                             </span>
                                         </div>
-
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

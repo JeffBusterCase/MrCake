@@ -34,7 +34,7 @@
 		
 		$credenciais = str_replace("'","123",$email);
 		//echo "<div style = 'margin: 0 auto;width: 90%;'>$email</div>";
-		$sql = new sql();
+		$sql = new sqlCliente();
 		
 		$sql->verifica($credenciais);
 		$sql->dados($credenciais);

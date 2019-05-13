@@ -21,14 +21,14 @@
 	//$query		= $Conexao -> query("select id, nome, idade FROM dbo.bla");
 	//$produtos	= $query -> fetchAll();
 	
-	//$sql = new sql();
+	//$sql = new sqlCliente();
 	
 	//$sql->adm();
 
 
     // jefferson tests ( gambiarra em cima de gambiarra)
 
-    $cliente = new sql();
+    $cliente = new sqlCliente();
 
     $cliente->dados('a@b.com');
 

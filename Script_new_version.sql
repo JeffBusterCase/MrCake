@@ -60,14 +60,14 @@ ID_Produto int not null,
 Status int not null,
 Cod_Endereco_Entrega int not null);
 
-CREATE TABLE Produto(
+CREATE TABLE Produtos(
 ID_Produto int not null,
 ID_Fornecedor int not null,
 Nome varchar(50) not null,
 Descricao varchar(255) not null,
 Preco decimal(5,2) not null);
 
-CREATE TABLE Ingrediente(
+CREATE TABLE Ingredientes(
 Codigo int not null,
 ID_Produto int not null,
 Descricao varchar(20) not null);

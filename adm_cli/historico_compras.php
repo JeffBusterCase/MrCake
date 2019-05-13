@@ -14,7 +14,7 @@
 				</tr>
 			</thead>
 			<tbody align="left">
-                <?php // TODO: Aplicar DRY ( Don't Repeat Yourself )
+                <?php
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/bd/conexao.php";
 
                     function toReal($val){
@@ -26,20 +26,23 @@
                     foreach($pedidos_em_aguardo as $pedido_row) {
                         $id_produto = $pedido_row['id_produto'];
 
-                        $sql = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
+                        $sql = "SELECT id_fornecedor, nome, descricao, preco FROM Produtos WHERE id_produto=$id_produto";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
 
+                        if(!stmt){
 
-                        $produto_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            echo "<script>alert('erro no carregamento dos produtos')</script>";
+                        }
+
+                        $produto_row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
                         $sql = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
-                        $fornecedor_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+                        $fornecedor_row = $stmt->fetch(PDO::FETCH_ASSOC);
                 ?>
                     <tr>
                         <td>sem data prévia</td>
@@ -65,17 +68,27 @@
                     foreach($pedidos_entregues as $pedido_row) {
                         $id_produto = $pedido_row['id_produto'];
 
-                        $sql = "SELECT * FROM Produtos WHERE id_produto=$id_produto";
+                        $sql = "SELECT id_produto, id_fornecedor, nome, descricao, preco FROM Produtos WHERE id_produto=$id_produto";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
-                        $produto_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        if(!stmt){
+                            echo "<script>alert('erro carregando fornecedores');</script>";
+                        }
+
+                        $produto_row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                         $id_fornecedor = $produto_row['id_fornecedor'];
 
                         $sql = "SELECT nome_fantasia FROM Fornecedores WHERE id_fornecedor=$id_fornecedor";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
-                        $fornecedor_row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        if(!stmt){
+                            echo "<script>alert('erro carregando fornecedores');</script>";
+                        }
+
+                        $fornecedor_row = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 ?>
                     <tr>

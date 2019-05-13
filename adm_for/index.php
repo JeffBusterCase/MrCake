@@ -33,7 +33,7 @@
 		$email = $_GET['email'];
 
 		//echo "<div style = 'margin: 0 auto;width: 90%;'>$email</div>";
-		$sql = new sql();
+		$sql = new sqlFornecedor();
 		
 		$sql->verifica($email);		
 		$sql->dados($email);

@@ -88,6 +88,10 @@
                         "VALUES($id_produto, '$ingrediente')";
                     $stmt = $conn->prepare($sql);
                     $stmt->execute();
+
+                    if($stmt){
+                        echo "<script>alert('Ingredientes cadastrados com sucesso');</script>";
+                    }
                 }
 
                 if($stmt) {
