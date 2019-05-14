@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt">
     <head>
-        <title>Área do cliente</title>
+        <title>Área do fornecedor</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta lang="pt-br">
@@ -167,21 +167,22 @@
 
         require_once $_SERVER['DOCUMENT_ROOT'] . '/bd/conexao.php';
 
-
-
         $search_string = $_POST['txtPesquisaClienteProduto'];
         $email = $_POST['txtEmailPesquisa'];
 
         function pesquisaProdutos($search_string){
             $search_string = strtolower($search_string);
 
-            $conn = getConnection();
-
-            $sql = "SELECT id_produto, id_fornecedor, nome, descricao, preco FROM Produtos";
-
+            $sql = "SELECT id_produto, id_fornecedor, nome, descricao, preco, imagem FROM Produtos";
             $stmt = $conn->prepare($sql);
-            $stmt->execute();
-
+            $res = $stmt->execute();
+			
+			if(!res){
+				$err = $conn->errorInfo();
+				$err = var_dump($err);
+				echo "<script>alert('Algo deu errado: ' + $err);</script>";
+			}
+			
             $results = array();
 
             foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $produto){
@@ -191,7 +192,7 @@
                     continue;
                 }
 
-                // Para dividir as strings 'Bolo de chocolate' -> 'Bolo' 'de' 'chocolate'. logo procura cada um no no bd.
+                // Para dividir as strings 'Bolo de chocolate' -> 'Bolo' 'de' 'chocolate'. logo procura cada um no bd.
                 $items = explode(' ', $search_string);
 
                 $explode_encontrou = false;
@@ -221,21 +222,19 @@
         function getFornecedor($id){
             $id = intval($id);
 
-            $conn = getConnection();
 
-            $sql = "SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone FROM Fornecedores WHERE id_fornecedor = $id";
-
+            $sql = "
+				SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone
+				FROM Fornecedores
+				WHERE id_fornecedor = $id
+			";
+			
             $stmt = $conn->prepare($sql);
             $stmt->execute();
 
-            if($stmt){
-                $fornecedor = $stmt->fetch(PDO::FETCH_ASSOC);
+            $fornecedor = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                return $fornecedor;
-            } else {
-                echo "<script>alert('PESQUISANDO PRODUTOS');</script>";
-                return false;
-            }
+            return $fornecedor;
         }
 
         $produtos = pesquisaProdutos($search_string);
@@ -258,14 +257,14 @@
             <!--    Items    -->
 
             <!-- Grid column -->
-            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+            <div class="col-lg-4 col-md-12 mb-lg-0 mb-4" style="padding-bottom:30px;">
                 <!-- Card -->
                 <div class="card card-cascade wider card-ecommerce">
                     <!-- Card image -->
                     <div class="view view-cascade overlay">
                         <!--           Só que neste nível aqui /adm_cli não existe Imagens.             -->
-                        <img src="../Imagens/<?php echo $produto['imagem']; ?>" class="card-img-top"
-                             alt="sample photo" width="10px" height="500px">
+                        <img src="/Imagens/<?php echo $produto['imagem']; ?>" class="card-img-top"
+                             alt="sample photo" width="10px" height="300px">
                         <a>
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -308,11 +307,12 @@
                                                 0
                                             </span>
                                         </div>
+
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary" onclick="finalizaCompra(<?php echo $produto['id_produto']; ?>)">Comprar</button>
-                                        <!--<button type="button" class="btn btn-primary" onclick="addToList(--><?php //echo $produto['id_produto']; ?>//)">Comprar</button>
+                                        <!--<button type="button" class="btn btn-primary" onclick="addToList(<?php //echo $produto['id_produto']; ?>//)">Comprar</button>-->
                                     </div>
                                 </div>
                             </div>

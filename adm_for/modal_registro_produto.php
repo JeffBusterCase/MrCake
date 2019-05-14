@@ -103,8 +103,8 @@
                             <button type="button" style="margin-top: 5px;width:90px;height:30px;padding:0px;"  class="btn btn-success" onclick="window.add_ingrediente()">Adicionar</button>
 						</div>
 
-						<label class="col-6 " for="produto-img"> Inserir imagens</label>
-						<input type="file" class="col-9 form-control-file" name="txtFotoP" id="exampleFormexampleFormControlFile1">
+						<label class="col-6 " for="produto-img">Inserir imagens</label>
+						<input type="FILE" class="col-9 form-control-file" name="txtFotoP" id="txtFotoP"/>
 
 					</div>
 					<input type = "text" name = "email" value = "<?php echo "$email"; ?>" style = "display:none">

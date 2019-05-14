@@ -170,23 +170,33 @@
         $search_string = $_POST['txtPesquisaClienteProduto'];
         $email = $_POST['txtEmailPesquisa'];
 
+		$conn = getConnection();
+		
         function pesquisaProdutos($search_string){
+			$conn = getConnection();
+			
             $search_string = strtolower($search_string);
 
-            $sql = "SELECT * FROM Produtos";
+            $sql = "SELECT id_produto, id_fornecedor, nome, descricao, preco, imagem FROM Produtos";
             $stmt = $conn->prepare($sql);
-            $stmt->execute();
-
+            $res = $stmt->execute();
+			
+			if(!res){
+				$err = $conn->errorInfo();
+				$err = var_dump($err);
+				echo "<script>alert('Algo deu errado: ' + $err);</script>";
+			}
+			
             $results = array();
 
-            while($produto = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+            foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $produto){
                 // Pesquisar o nome do produto contem a string de pesquisa
                 if (strpos(strtolower($produto['nome']), $search_string) !== false ){
                     array_push($results, $produto);
                     continue;
                 }
 
-                // Para dividir as strings 'Bolo de chocolate' -> 'Bolo' 'de' 'chocolate'. logo procura cada um no no bd.
+                // Para dividir as strings 'Bolo de chocolate' -> 'Bolo' 'de' 'chocolate'. logo procura cada um no bd.
                 $items = explode(' ', $search_string);
 
                 $explode_encontrou = false;
@@ -217,11 +227,16 @@
             $id = intval($id);
 
 
-            $sql = "SELECT * FROM Fornecedores WHERE id_fornecedor = $id";
+            $sql = "
+				SELECT id_fornecedor, cnpj, razao_social, nome_fantasia, ddd, telefone
+				FROM Fornecedores
+				WHERE id_fornecedor = $id
+			";
+			
             $stmt = $conn->prepare($sql);
             $stmt->execute();
 
-            $fornecedor = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $fornecedor = $stmt->fetch(PDO::FETCH_ASSOC);
 
             return $fornecedor;
         }
@@ -252,7 +267,7 @@
                     <!-- Card image -->
                     <div class="view view-cascade overlay">
                         <!--           Só que neste nível aqui /adm_cli não existe Imagens.             -->
-                        <img src="../Imagens/<?php echo $produto['imagem']; ?>" class="card-img-top"
+                        <img src="/Imagens/<?php echo $produto['imagem']; ?>" class="card-img-top"
                              alt="sample photo" width="10px" height="300px">
                         <a>
                             <div class="mask rgba-white-slight"></div>
@@ -301,7 +316,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary" onclick="finalizaCompra(<?php echo $produto['id_produto']; ?>)">Comprar</button>
-                                        <!--<button type="button" class="btn btn-primary" onclick="addToList(--><?php //echo $produto['id_produto']; ?>//)">Comprar</button>
+                                        <!--<button type="button" class="btn btn-primary" onclick="addToList(<?php //echo $produto['id_produto']; ?>//)">Comprar</button>-->
                                     </div>
                                 </div>
                             </div>

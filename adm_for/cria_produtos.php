@@ -11,7 +11,7 @@
         $nome = $_POST['txtNomeP'];
         $descricao = $_POST['txtDescricaoP'];
         $preco = $_POST['txtPrecoP'];
-        $imagem = $_POST['txtFotoP'];
+        $imagem = $_FILES['txtFotoP'];
         $ingredientes = $_POST['txtIngredientesP'];
         $preco =  str_replace(",",".",$preco);
 
@@ -50,9 +50,9 @@
 		$id_produto = $row['N'];
 		
         $file_name = 'bolo_' . $row['N'] . '.jpg';
-
-        //$imgfile = file_put_contents('/Imagens/Produtos/' . $file_name, $imagem);
-
+			
+		move_uploaded_file($imagem["tmp_name"], "/Imagens/Produtos/" . $file_name);
+		
         //echo "<script>alert('depois de \$imgfile')</script>";
 
         $sql = "insert into produtos(id_produto, id_fornecedor, nome, descricao, preco, imagem)
