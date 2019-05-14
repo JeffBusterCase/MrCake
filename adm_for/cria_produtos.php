@@ -15,15 +15,6 @@
         $ingredientes = $_POST['txtIngredientesP'];
         $preco =  str_replace(",",".",$preco);
 
-
-        //echo "<script>alert('$preco');</script>";
-        /*
-        echo "<script>alert('$nome');</script>";
-        echo "<script>alert('$descricao');</script>";
-        echo "<script>alert('$preco');</script>";
-        echo "<script>alert('$imagem');</script>";
-        */
-
         $sql = "SELECT id_origem FROM usuarios WHERE email = '$email'";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -56,14 +47,16 @@
         echo "<script>alert('antes de \$imgfile')</script>";
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+		$id_produto = $row['N'];
+		
         $file_name = 'bolo_' . $row['N'] . '.jpg';
 
         //$imgfile = file_put_contents('/Imagens/Produtos/' . $file_name, $imagem);
 
         //echo "<script>alert('depois de \$imgfile')</script>";
 
-        $sql = "insert into produtos(id_fornecedor, nome, descricao, preco, imagem)
-			values ($id_fornecedor, '$nome', '$descricao', '$preco', 'Produtos/$file_name')";
+        $sql = "insert into produtos(id_produto, id_fornecedor, nome, descricao, preco, imagem)
+			values ($id_produto, $id_fornecedor, '$nome', '$descricao', '$preco', 'Produtos/$file_name')";
 		
 		echo "<script>alert('$sql');</script>";
         $stmt = $conn->prepare($sql);
