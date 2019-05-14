@@ -150,7 +150,7 @@
 	</div>
 	
 	<div class = "editar_produtos">
-		<?php include "modal_editar_produtos.php"; ?>
+		<?php // include "modal_editar_produtos.php"; ?>
 	<div>
 
     

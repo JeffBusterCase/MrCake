@@ -1,9 +1,5 @@
 <div ng-controller="editar_produto">
     <!-- Modal -->
-	
-	<script>
-		
-	</script>
 	<form action="" class="modal fade" id="modalEditarProduto" tabindex="-1" role="form" aria-labelledby="exampleModalLongTitle" aria-hidden="true"
 		method="POST">
 		<div class="modal-dialog" role="document">
@@ -31,25 +27,6 @@
 							<input class="form-control" type="nunber" value="<?php echo $preco; ?>" name = "txtPrecoP" id="txtPrecoP">
 						</div>
 						
-						<?php
-						/*
-						<label for="ingrediente-produto"class="col-3 form-label" for="inlineFormCustomSelectPref">Ingredientes</label>
-						<div class="col-8">
-							<!-- TODO: Usar JQuery para armazenar ingredientes em um array e passar para o PHP com POST 
-								 A cada OK, vc adiciona o array, e depois manda no POST.
-							-->
-							<select class="custom-select " id="inlineFormCustomSelectPref">
-								<option selected> Ingredientes </option>
-								<option value="1"> Chocolates </option>
-								<option value="2"> Morango </option>
-								<option value="3"> Bolo de cenoura </option>
-							</select>
-							<!-- TODO: fazer func no JQuery -->
-							<button>Adicionar</button>
-						</div>
-						*/ 
-						?>
-
 						<label class="col-6 " for="produto-img"> Inserir imagens</label>
 						<input type="file" class="col-9 form-control-file" name = "foto" id="exampleFormControlFile1">
 						<label for=""></label>
